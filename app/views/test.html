@@ -1,0 +1,15 @@
+<div >
+  <h2>Test View</h2>
+  <p>Function in controller returns an array of 3 items</p>
+  <ul>
+    <li ng-repeat="stuff in yeomanStuff()">{{stuff}}</li>
+  </ul>
+  <p>Service returns JSON array of 4 objects to controller</p>
+  <ul>
+    <li ng-repeat="stuff in meanStuff()">{{stuff.component}}</li>
+  </ul>
+  <p>Factory returns JSON file containing of 7 objects to controller</p>
+  <ul>
+    <li ng-repeat="stuff in otherStuff.data.components"><a href="{{stuff.url}}" target="_blank">{{stuff.component}}</a></li>
+  </ul>
+</div>
