@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-exports.componentSchema = new mongoose.Schema({
+module.exports = mongoose.model('Component', {
     component: String,
     url: String
 });

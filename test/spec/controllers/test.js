@@ -10,24 +10,37 @@ describe('Controller: TestCtrl', function($httpBackend) {
 
     // Initialize the controller and a mock scope
     beforeEach(inject(function($controller, $rootScope, $httpBackend) {
-        $httpBackend.when('GET', 'otherStuff.json').respond({
+        $httpBackend.when('GET', 'data/otherStuff.json').respond({
             "components": [{
-                "component": "jQuery",
-                "url": "http://jquery.com"
+                "component": "red",
+                "url": "http://orange.com"
             }, {
-                "component": "Twitter Bootstrap",
-                "url": "http://getbootstrap.com"
+                "component": "blue",
+                "url": "http://blue.com"
             }, {
-                "component": "Karma",
-                "url": "http://karma-runner.github.io"
+                "component": "yellow",
+                "url": "http://yellow.com"
             }, {
-                "component": "Jade",
-                "url": "http://jade-lang.com"
-            }, {
-                "component": "BreezeJS",
-                "url": "http://www.breezejs.com"
+                "component": "orange",
+                "url": "http://orange.com"
             }]
         });
+
+        $httpBackend.when('GET', '/api/components').respond(
+            [{
+                _id: "53226ca2b260b524e8ced833",
+                component: "apple",
+                description: "delicious and crisp red fruit"
+            }, {
+                _id: "53226ca2b260b524e8ced834",
+                component: "cherry",
+                description: "small dark red fruit"
+            }, {
+                _id: "53226ca2b260b524e8ced835",
+                component: "grapefruit",
+                description: "tart yellowish-orange fruit"
+            }]
+        );
 
         scope = $rootScope.$new();
         TestCtrl = $controller('TestCtrl', {
@@ -46,6 +59,10 @@ describe('Controller: TestCtrl', function($httpBackend) {
     });
 
     it('should attach a list of otherStuff to the scope', function() {
-        expect(scope.otherStuff.data.components.length).toBe(5);
+        expect(scope.otherStuff.data.components.length).toBe(4);
+    });
+
+    it('should attach a list of mongoStuff to the scope', function() {
+        expect(scope.mongoStuff.length).toBe(3);
     });
 });

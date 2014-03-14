@@ -9,7 +9,15 @@
     <li ng-repeat="stuff in meanStuff()">{{stuff.component}}</li>
   </ul>
   <p>Factory returns JSON file containing of 7 objects to controller</p>
+  <ol>
+    <li ng-repeat="stuff in otherStuff.data.components">
+      <a href="{{stuff.url}}" target="_blank">{{stuff.component}}</a>
+    </li>
+  </ol>
+  <p>MongoDB returns 3 documents to controller</p>
   <ul>
-    <li ng-repeat="stuff in otherStuff.data.components"><a href="{{stuff.url}}" target="_blank">{{stuff.component}}</a></li>
+    <li ng-repeat="stuff in mongoStuff">
+      <b>{{stuff.component}}</b>: {{stuff.description}}</a>
+    </li>
   </ul>
 </div>
