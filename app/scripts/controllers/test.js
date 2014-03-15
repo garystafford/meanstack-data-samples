@@ -11,7 +11,7 @@ angular.module('generatorMeanstackApp')
     };
 
     $scope.meanStuff = function() {
-      return TestService.meanStuff();
+      return TestService.getMeanStuff();
     };
 
     $scope.otherStuff = {};

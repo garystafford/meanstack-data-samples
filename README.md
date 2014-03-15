@@ -4,9 +4,10 @@ Based on wlepinski's [generator-meanstack](https://github.com/wlepinski/generato
 
 
 Contains examples of retrieving data using various AngularJS methods:
-* Function in AngularJS controller contains array of static items
-* AngularJS service returns JSON array of static objects to controller
-* AngularJS factory returns contents of JSON file to controller
+* Function within AngularJS controller contains array of strings
+* AngularJS service returns an array of simple object literals to controller
+* AngularJS factory returns contents of JSON file to controller  
+Uses a deferred promise to perform action asynchronously: [$http](http://docs.angularjs.org/api/ng/service/$http)
 * MongoDB database returns collection of documents to controller
 
 ### Instructions to Use Project

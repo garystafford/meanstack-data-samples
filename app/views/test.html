@@ -1,20 +1,20 @@
 <div >
   <h2>Test View</h2>
-  <p>Function in controller contains array of items</p>
+  <p>Function within AngularJS controller contains array of strings</p>
   <ul>
     <li ng-repeat="stuff in yeomanStuff()">{{stuff}}</li>
   </ul>
-  <p>Service returns JSON array of objects to controller</p>
+  <p>AngularJS service returns an array of simple object literals to controller</p>
   <ul>
     <li ng-repeat="stuff in meanStuff()">{{stuff.component}}</li>
   </ul>
-  <p>Factory returns contents of JSON file to controller</p>
-  <ol>
+  <p>AngularJS factory returns contents of JSON file to controller</p>
+  <ul>
     <li ng-repeat="stuff in otherStuff.data.components">
       <a href="{{stuff.url}}" target="_blank">{{stuff.component}}</a>
     </li>
-  </ol>
-  <p>MongoDB returns collection of documents to controller</p>
+  </ul>
+  <p>MongoDB database returns collection of documents to controller</p>
   <ul>
     <li ng-repeat="stuff in mongoStuff">
       <b>{{stuff.component}}</b>: {{stuff.description}}</a>
