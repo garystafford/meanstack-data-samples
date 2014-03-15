@@ -33,8 +33,8 @@ db.components.find() // verifies documents were created
 
 ```
 npm install -g generator-meanstack
-git clone https://github.com/garystafford/generator-meanstack-sample.git
-cd generator-meanstack-sample
+git clone https://github.com/garystafford/meanstack-data-samples.git
+cd meanstack-data-samples
 npm install
 grunt
 grunt server
