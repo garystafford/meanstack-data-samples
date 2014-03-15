@@ -1,24 +1,24 @@
 {
-    "components": [{
-        "component": "jQuery",
-        "url": "http://jquery.com"
-    }, {
-        "component": "Twitter Bootstrap",
-        "url": "http://getbootstrap.com"
-    }, {
-        "component": "Karma",
-        "url": "http://karma-runner.github.io"
-    }, {
-        "component": "Jade",
-        "url": "http://jade-lang.com"
-    }, {
-        "component": "JSHint",
-        "url": "http://www.jshint.com"
-    }, {
-        "component": "Underscore.js",
-        "url": "http://underscorejs.org"
-    }, {
-        "component": "BreezeJS",
-        "url": "http://www.breezejs.com"
-    }]
+  "components": [{
+    "component": "jQuery",
+    "url": "http://jquery.com"
+  }, {
+    "component": "Twitter Bootstrap",
+    "url": "http://getbootstrap.com"
+  }, {
+    "component": "Karma",
+    "url": "http://karma-runner.github.io"
+  }, {
+    "component": "Jade",
+    "url": "http://jade-lang.com"
+  }, {
+    "component": "JSHint",
+    "url": "http://www.jshint.com"
+  }, {
+    "component": "Underscore.js",
+    "url": "http://underscorejs.org"
+  }, {
+    "component": "BreezeJS",
+    "url": "http://www.breezejs.com"
+  }]
 }

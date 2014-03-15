@@ -1,7 +1,6 @@
 'use strict';
 
 (function() {
-  /* jshint validthis: true */
   var app = angular.module('generatorMeanstackApp', []);
   app.config(function($routeProvider) {
     $routeProvider

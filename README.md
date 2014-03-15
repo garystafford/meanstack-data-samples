@@ -41,6 +41,7 @@ grunt server
 ```
 
 ### Notes About project
-* Link to view: [http://localhost:3000/#/test](http://localhost:3000/#/test).
+* Link to main `test` Angular JS view: [http://localhost:3000/#/test](http://localhost:3000/#/test).
+* HTTP GET call to MongoDB data: [http://localhost:3000/api/components](http://localhost:3000/api/components)
 * I change Karma's default port `8080` to `8090` in `karma.conf.js` and `karma-e2e.conf.js` files. It conflicted with my installation of Apache and every other application that wants to use port `8080` by default.
 * The `grunt` command now runs without error. In the original project, `jshint` had a strict violation with `validthis`.
