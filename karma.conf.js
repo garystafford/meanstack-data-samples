@@ -23,7 +23,7 @@
     reporters = ['progress'];
 
     // web server port
-    port = 8091;
+    port = 8090;
 
     // cli runner port
     runnerPort = 9100;
