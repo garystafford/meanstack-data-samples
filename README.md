@@ -21,13 +21,12 @@ Contains examples of retrieving data using various AngularJS methods:
 ```
 start mondod
 mongo
-show dbs
-use meanstack-test <- creates database if it doesn't exist
+use meanstack-test // creates database if it doesn't exist
 db.components.insert({ "component": "mongod", "description": "the core database process" })
 db.components.insert({ "component": "mongos", "description": "the controller and query router for sharded clusters" })
 db.components.insert({ "component": "mongo",  "description": "the interactive MongoDB Shell" })
-show collections //verifies collection was created
-db.components.find() //verifies documents were created
+show collections // verifies collection was created
+db.components.find() // verifies documents were created
 ```
 
 ##### Install and Configure the Project
