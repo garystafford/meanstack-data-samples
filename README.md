@@ -1,7 +1,7 @@
-## Data Binding Project based on 'generator-meanstack'
+## Retrieving Data with MEAN Stack
 ### Overview
-Explores basic methods of retrieving and displaying data using AngularJS.  
-Based on wlepinski's [generator-meanstack](https://github.com/wlepinski/generator-meanstack).
+Based on wlepinski's [generator-meanstack](https://github.com/wlepinski/generator-meanstack). Explores various methods of retrieving and displaying data using AngularJS.
+
 
 Contains examples of retrieving data using various AngularJS methods:
 * Function in AngularJS controller contains array of static items
@@ -44,4 +44,4 @@ grunt server
 ### Notes About project
 * Link to view: [http://localhost:3000/#/test](http://localhost:3000/#/test).
 * I change Karma's default port `8080` to `8090` in `karma.conf.js` and `karma-e2e.conf.js` files. It conflicted with my installation of Apache and every other application that wants to use port `8080` by default.
-* The `grunt` command now runs clean. In the original project, `jshint` had a strict violation with `validthis`.
+* The `grunt` command now runs without error. In the original project, `jshint` had a strict violation with `validthis`.
