@@ -2,12 +2,12 @@ var express = require('express'),
     path = require('path');
 
 module.exports = function(app) {
-    app.configure('development', function() {
+    app.configure('test', function() {
         app.use(function staticsPlaceholder(req, res, next) {
             return next();
         });
-        app.set('db', 'mongodb://localhost/meanstack-dev');
-        app.set('name', 'A generator-meanstack sample application - Development');
+        app.set('db', 'mongodb://localhost/meanstack-test');
+        app.set('name', 'A generator-meanstack sample application - Test');
         app.set('port', process.env.PORT || 9000);
         app.set('views', path.join(app.directory, '/app'));
         app.engine('html', require('ejs').renderFile);
