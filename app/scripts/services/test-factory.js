@@ -3,7 +3,7 @@
 angular.module('generatorMeanstackApp')
   .factory('testFactory', function($q, $http) {
     return {
-      otherStuff: function() {
+      getOtherStuff: function() {
         var deferred = $q.defer();
 
         $http.get('data/otherStuff.json').then(function(data) {

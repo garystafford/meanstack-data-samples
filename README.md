@@ -6,8 +6,7 @@ Based on wlepinski's [generator-meanstack](https://github.com/wlepinski/generato
 Contains examples of retrieving data using various AngularJS methods:
 * Function within AngularJS controller contains array of strings
 * AngularJS service returns an array of simple object literals to controller
-* AngularJS factory returns contents of JSON file to controller  
-Uses a deferred promise to perform action asynchronously: [$http](http://docs.angularjs.org/api/ng/service/$http)
+* AngularJS factory returns contents of JSON file to controller
 * MongoDB database returns collection of documents to controller
 
 ### Instructions to Use Project
@@ -42,7 +41,8 @@ grunt server
 ```
 
 ### Notes About project
-* Link to main `test` Angular JS view: [http://localhost:3000/#/test](http://localhost:3000/#/test).
-* HTTP GET call to MongoDB data: [http://localhost:3000/api/components](http://localhost:3000/api/components)
+* Link to main AngularJS `test` view: [http://localhost:3000/#/test](http://localhost:3000/#/test).
+* HTTP GET call to MongoDB data: [http://localhost:3000/api/components](http://localhost:3000/api/components).
+* I've used deferred promises to perform actions asynchronously: [$http](http://docs.angularjs.org/api/ng/service/$http)
 * I change Karma's default port `8080` to `8090` in `karma.conf.js` and `karma-e2e.conf.js` files. It conflicted with my installation of Apache and every other application that wants to use port `8080` by default.
 * The `grunt` command now runs without error. In the original project, `jshint` had a strict violation with `validthis`.

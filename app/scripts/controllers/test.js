@@ -10,13 +10,17 @@ angular.module('generatorMeanstackApp')
       ];
     };
 
-    $scope.meanStuff = function() {
-      return TestService.getMeanStuff();
-    };
+    $scope.meanStuff = {};
+
+    var promise = TestService.getMeanStuff();
+
+    promise.then(function(data) {
+      $scope.meanStuff = data;
+    });
 
     $scope.otherStuff = {};
 
-    var promise = testFactory.otherStuff();
+    var promise = testFactory.getOtherStuff();
 
     promise.then(function(data) {
       $scope.otherStuff = data;
