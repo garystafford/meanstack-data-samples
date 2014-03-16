@@ -1,5 +1,6 @@
 'use strict';
 
+// Function within AngularJS controller contains array of strings
 angular.module('generatorMeanstackApp')
   .controller('TestCtrl', function($scope, $http, TestService, testFactory) {
     $scope.yeomanStuff = function() {
@@ -10,23 +11,21 @@ angular.module('generatorMeanstackApp')
       ];
     };
 
+    // AngularJS service returns an array of simple object literals to controller
     $scope.meanStuff = {};
-
     var promise = TestService.getMeanStuff();
-
     promise.then(function(data) {
       $scope.meanStuff = data;
     });
 
+    // AngularJS factory returns contents of JSON file to controller
     $scope.otherStuff = {};
-
-    var promise = testFactory.getOtherStuff();
-
+    promise = testFactory.getOtherStuff();
     promise.then(function(data) {
       $scope.otherStuff = data;
     });
 
-    // when landing on the page, get all components and show them
+    // MongoDB database returns collection of documents to controller
     $http.get('/api/components')
       .success(function(data) {
         $scope.mongoStuff = data;
