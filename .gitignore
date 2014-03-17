@@ -4,4 +4,4 @@
 node_modules/
 public/lib
 dist
-.idea/
+.idea
