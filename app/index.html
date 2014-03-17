@@ -8,9 +8,24 @@
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <!-- build:css({.tmp,app}) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
+      <!-- build:css({.tmp,app}) styles/bootstrap.min.css -->
+      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+      <!-- endbuild -->
+
+      <!-- build:css({.tmp,app}) styles/bootstrap-theme.min.css -->
+      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+      <!-- endbuild -->
+
+      <!-- build:css({.tmp,app}) styles/main.css -->
+      <link rel="stylesheet" href="styles/main.css">
+      <!-- endbuild -->
+
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
   </head>
   <body ng-app="generatorMeanstackApp">
     <!-- Add your site or application content here -->
@@ -19,7 +34,8 @@
     <!-- Libraries -->
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
-    
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
 
     <!-- build:js scripts/modules.js -->
     <script src="bower_components/angular-resource/angular-resource.js"></script>

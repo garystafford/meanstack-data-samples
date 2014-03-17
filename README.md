@@ -4,7 +4,7 @@ Based on wlepinski's [generator-meanstack](https://github.com/wlepinski/generato
 
 
 Contains examples of retrieving data using various AngularJS methods:
-* Function within AngularJS controller contains array of strings
+* Function within AngularJS controller returns array of strings
 * AngularJS service returns an array of simple object literals to controller
 * AngularJS factory returns contents of JSON file to controller
 * MongoDB database returns collection of documents to controller
@@ -22,9 +22,12 @@ Contains examples of retrieving data using various AngularJS methods:
 start mondod
 mongo
 use meanstack-test // creates database if it doesn't exist
-db.components.insert({ "component": "mongod", "description": "the core database process" })
-db.components.insert({ "component": "mongos", "description": "the controller and query router for sharded clusters" })
-db.components.insert({ "component": "mongo",  "description": "the interactive MongoDB Shell" })
+db.components.insert({ "component": "mongod", "description": "core database process" })
+db.components.insert({ "component": "mongos", "description": "controller and query router for sharded clusters" })
+db.components.insert({ "component": "mongo",  "description": "interactive MongoDB Shell" })
+db.components.insert({ "component": "mongodump",  "description": "utility for creating binary export of database contents" })
+db.components.insert({ "component": "mongorestore",  "description": "writes data from a binary database dump to a MongoDB instance" })
+db.components.insert({ "component": "mongooplog",  "description": "polls operations from the replication oplog" })
 show collections // verifies collection was created
 db.components.find() // verifies documents were created
 ```

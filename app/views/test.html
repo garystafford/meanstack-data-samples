@@ -1,23 +1,27 @@
-<div >
-  <h2>Test View</h2>
-  <p>Function within AngularJS controller contains array of strings</p>
-  <ul>
-    <li ng-repeat="stuff in yeomanStuff()">{{stuff}}</li>
-  </ul>
-  <p>AngularJS service returns an array of simple object literals to controller</p>
-  <ul>
-    <li ng-repeat="stuff in meanStuff.components">{{stuff.component}}</li>
-  </ul>
-  <p>AngularJS factory returns contents of JSON file to controller</p>
-  <ul>
-    <li ng-repeat="stuff in otherStuff.data.components">
-      <a href="{{stuff.url}}" target="_blank">{{stuff.component}}</a>
-    </li>
-  </ul>
-  <p>MongoDB database returns collection of documents to controller</p>
-  <ul>
-    <li ng-repeat="stuff in mongoStuff">
-      <b>{{stuff.component}}</b>: {{stuff.description}}</a>
-    </li>
-  </ul>
+<div>
+    <h2>Test View</h2>
+
+    <p>Function within AngularJS controller returns array of strings</p>
+    <ul>
+        <li ng-repeat="stuff in yeomanStuff()">{{stuff}}</li>
+    </ul>
+    <p>AngularJS service returns an array of simple object literals to
+        controller</p>
+    <ul>
+        <li ng-repeat="stuff in meanStuff.components">
+            <a href="{{stuff.url}}" target="_blank">{{stuff.component}}</a>
+        </li>
+    </ul>
+    <p>AngularJS factory returns contents of JSON file to controller</p>
+    <ul>
+        <li ng-repeat="stuff in otherStuff.data.components">
+            <a href="{{stuff.url}}" target="_blank">{{stuff.component}}</a>
+        </li>
+    </ul>
+    <p>MongoDB database returns collection of documents to controller</p>
+    <ul>
+        <li ng-repeat="stuff in mongoStuff">
+            <b>{{stuff.component}}</b>: {{stuff.description}}</a>
+        </li>
+    </ul>
 </div>

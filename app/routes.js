@@ -8,7 +8,8 @@ module.exports = function(app) {
     // use mongoose to get all components in the database
     Component.find(function(err, components) {
 
-      // if there is an error retrieving, send the error. nothing after res.send(err) will execute
+      // if there is an error retrieving, send the error.
+      // nothing after res.send(err) will execute.
       if (err)
         res.send(err)
 
