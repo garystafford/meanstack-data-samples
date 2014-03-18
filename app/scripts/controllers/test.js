@@ -2,7 +2,7 @@
 
 // Function within AngularJS controller contains array of strings
 angular.module('generatorMeanstackApp')
-  .controller('TestCtrl', function ($scope, $http, TestService, testFactory) {
+  .controller('TestCtrl', function ($scope, $http, $location, $anchorScroll, TestService, testFactory) {
     $scope.yeomanStuff = function () {
       return [
         'yo',
@@ -32,5 +32,10 @@ angular.module('generatorMeanstackApp')
       })
       .error(function (data) {
         console.log('Error: ' + data);
-      });
+      })
+
+    $scope.scrollTo = function (id) {
+      $location.hash(id);
+      $anchorScroll();
+    }
   });
