@@ -32,10 +32,10 @@ angular.module('generatorMeanstackApp')
       })
       .error(function (data) {
         console.log('Error: ' + data);
-      })
+      });
 
     $scope.scrollTo = function (id) {
       $location.hash(id);
       $anchorScroll();
-    }
+    };
   });

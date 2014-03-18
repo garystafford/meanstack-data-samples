@@ -8,16 +8,20 @@ angular.module('generatorMeanstackApp')
       var components = {
         components: [
           {
-            component: 'MongoDB', url: 'http://www.mongodb.org'
+            component: 'MongoDB',
+            url: 'http://www.mongodb.org'
           },
           {
-            component: 'Express', url: 'http://expressjs.com'
+            component: 'Express',
+            url: 'http://expressjs.com'
           },
           {
-            component: 'AngularJS', url: 'http://angularjs.org'
+            component: 'AngularJS',
+            url: 'http://angularjs.org'
           },
           {
-            component: 'Node.js', url: 'http://nodejs.org'
+            component: 'Node.js',
+            url: 'http://nodejs.org'
           }
         ]
       };
