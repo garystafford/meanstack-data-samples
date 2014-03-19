@@ -1,11 +1,36 @@
 'use strict';
 
 $(document).on("click", 'a#collapseOneTitle.pull-right', function() {
-  console.log("click");
-  $(".glyphicon").removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
+  $("#collapseOneGlyph").removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
 });
 
 $(document).on("click", 'a#collapseOneTitle.pull-right.collapsed', function() {
-  console.log("click");
-  $(".glyphicon").removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
+  $("#collapseOneGlyph").removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
+});
+
+
+$(document).on("click", 'a#collapseTwoTitle.pull-right', function() {
+  $("#collapseTwoGlyph").removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
+});
+
+$(document).on("click", 'a#collapseTwoTitle.pull-right.collapsed', function() {
+  $("#collapseTwoGlyph").removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
+});
+
+
+$(document).on("click", 'a#collapseThreeTitle.pull-right', function() {
+  $("#collapseThreeGlyph").removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
+});
+
+$(document).on("click", 'a#collapseThreeTitle.pull-right.collapsed', function() {
+  $("#collapseThreeGlyph").removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
+});
+
+
+$(document).on("click", 'a#collapseFourTitle.pull-right', function() {
+  $("#collapseFourGlyph").removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
+});
+
+$(document).on("click", 'a#collapseFourTitle.pull-right.collapsed', function() {
+  $("#collapseFourGlyph").removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
 });
