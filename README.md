@@ -1,6 +1,6 @@
 ## Retrieving Data with MEAN Stack
 ### Overview
-Based on wlepinski's [generator-meanstack](https://github.com/wlepinski/generator-meanstack). Explores various methods of retrieving and displaying data using AngularJS.
+Explores various methods of retrieving and displaying data using AngularJS. Project based on wlepinski's [generator-meanstack](https://github.com/wlepinski/generator-meanstack), with MongoDB, Mongoose, and Twitter Bootstrap added.
 
 
 Contains examples of retrieving data using various AngularJS methods:
@@ -49,4 +49,4 @@ grunt server
 * Deferred promises to perform actions asynchronously: [$http](http://docs.angularjs.org/api/ng/service/$http)
 * Karma's default port `8080` to `8090` in `karma.conf.js` and `karma-e2e.conf.js` files. It conflicted with my installation of Apache and every other application that wants to use port `8080` by default.
 * The `grunt` command now runs without error. In the original project, `jshint` had a strict violation with `validthis`.
-* MongoDB, Mongoose, and Twitter Bootstrap to project.
+* MongoDB, Mongoose, and Twitter Bootstrap added to project.
