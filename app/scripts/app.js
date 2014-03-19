@@ -6,7 +6,7 @@
     $routeProvider
       .when('/', {
         templateUrl: 'views/test-bootstrap.html',
-        controller: 'MainCtrl'
+        controller: 'TestCtrl'
       })
       .when('/test', {
         templateUrl: 'views/test.html',
@@ -17,7 +17,7 @@
         controller: 'TestCtrl'
       })
       .otherwise({
-        redirectTo: 'views/test-bootstrap.html'
+        redirectTo: '/'
       });
   });
 })(); // <-- changed to immediately-invoked function expression to prevent strict error.
