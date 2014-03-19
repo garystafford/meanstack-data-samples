@@ -50,3 +50,5 @@ grunt server
 * Karma's default port `8080` to `8090` in `karma.conf.js` and `karma-e2e.conf.js` files. It conflicted with my installation of Apache and every other application that wants to use port `8080` by default.
 * The `grunt` command now runs without error. In the original project, `jshint` had a strict violation with `validthis`.
 * MongoDB, Mongoose, and Twitter Bootstrap added to project.
+
+![Chrome on Android 4.4][public/images/Screenshot_2014-03-18-20-41-48.png]
