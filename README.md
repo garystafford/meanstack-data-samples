@@ -51,4 +51,4 @@ grunt server
 * The `grunt` command now runs without error. In the original project, `jshint` had a strict violation with `validthis`.
 * MongoDB, Mongoose, and Twitter Bootstrap added to project.
 
-![Chrome on Android 4.4][public/images/Screenshot_2014-03-18-20-41-48.png]
+![Chrome on Android 4.4](https://github.com/garystafford/meanstack-data-samples/blob/master/public/images/Screenshot_2014-03-18-20-41-48.png)
