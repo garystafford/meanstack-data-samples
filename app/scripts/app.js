@@ -1,23 +1,23 @@
 'use strict';
 
-(function() {
+(function () {
   var app = angular.module('generatorMeanstackApp', []);
-  app.config(function($routeProvider) {
+  app.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
+        templateUrl: 'views/test-bootstrap.html',
         controller: 'MainCtrl'
       })
       .when('/test', {
         templateUrl: 'views/test.html',
         controller: 'TestCtrl'
       })
-      .when('/test-bs', {
-        templateUrl: 'views/test-bs.html',
+      .when('/test-bootstrap', {
+        templateUrl: 'views/test-bootstrap.html',
         controller: 'TestCtrl'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: 'views/test-bootstrap.html'
       });
   });
 })(); // <-- changed to immediately-invoked function expression to prevent strict error.

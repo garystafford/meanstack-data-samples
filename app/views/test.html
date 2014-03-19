@@ -1,27 +1,42 @@
 <div>
     <h2>Test View</h2>
 
-    <p>Function within AngularJS controller returns array of strings</p>
+    <p>Function within the AngularJS Controller returns a static
+        array of strings.</p>
     <ul>
         <li ng-repeat="stuff in yeomanStuff()">{{stuff}}</li>
     </ul>
-    <p>AngularJS service returns an array of simple object literals to
-        controller</p>
+    <p>AngularJS Service returns a static array of object
+        literals to the controller.</p>
     <ul>
         <li ng-repeat="stuff in meanStuff.components">
             <a href="{{stuff.url}}" target="_blank">{{stuff.component}}</a>
         </li>
     </ul>
-    <p>AngularJS factory returns contents of JSON file to controller</p>
+    <p>AngularJS Factory returns contents of JSON file to the
+        controller.</p>
     <ul>
         <li ng-repeat="stuff in otherStuff.data.components">
             <a href="{{stuff.url}}" target="_blank">{{stuff.component}}</a>
         </li>
     </ul>
-    <p>MongoDB database returns collection of documents to controller</p>
+    <p>MongoDB database returns collection of documents to
+        controller.</p>
     <ul>
         <li ng-repeat="stuff in mongoStuff">
-            <b>{{stuff.component}}</b>: {{stuff.description}}</a>
+            <b>{{stuff.component}}</b>: {{stuff.description}}
         </li>
     </ul>
+</div>
+</br>
+<div class="container">
+    <div id="footer">
+        <button class="btn btn-primary btn-sm"
+                ng-click="changeView('test-bootstrap')">
+            Without Bootstrap
+        </button>
+        <a class="btn-link pull-right" ng-click="scrollTo('top')">
+            <span class=" glyphicon glyphicon-arrow-up "></span>
+            Top of Page</a>
+    </div>
 </div>

@@ -93,7 +93,7 @@
                 </div>
                 <ul class="list-group">
                     <li class="list-group-item" ng-repeat="stuff in mongoStuff">
-                        <b>{{stuff.component}}</b>: {{stuff.description}}</a>
+                        <b>{{stuff.component}}</b>: {{stuff.description}}
                     </li>
                 </ul>
             </div>
@@ -101,8 +101,12 @@
     </div>
 </div>
 <div class="container">
-    <div id="footer"><a class="btn-link"
-                        ng-click="scrollTo('top')"><span
-            class=" glyphicon glyphicon-arrow-up "></span>
-        Top of Page</a></div>
+    <div id="footer">
+        <button class="btn btn-primary btn-sm" ng-click="changeView('test')">
+            Without Bootstrap
+        </button>
+        <a class="btn-link pull-right" ng-click="scrollTo('top')">
+            <span class=" glyphicon glyphicon-arrow-up "></span>
+            Top of Page</a>
+    </div>
 </div>

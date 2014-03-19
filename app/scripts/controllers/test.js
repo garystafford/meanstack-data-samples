@@ -38,4 +38,8 @@ angular.module('generatorMeanstackApp')
       $location.hash(id);
       $anchorScroll();
     };
+
+    $scope.changeView = function (view) {
+      $location.path(view); // path not hash
+    };
   });
