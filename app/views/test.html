@@ -28,6 +28,16 @@
         </li>
     </ul>
 </div>
+<p>AngularJS Controller calls Google Web Search API.</p>
+<ul>
+    <li ng-repeat="stuff in googleStuff.data.responseData.results">
+        <a href="{{unescapedUrl.url}}"
+           target="_blank">{{stuff.visibleUrl}}</a>
+        <br/>
+        {{stuff.titleNoFormatting}}
+    </li>
+</ul>
+</div>
 </br>
 <div class="container">
     <div id="footer">

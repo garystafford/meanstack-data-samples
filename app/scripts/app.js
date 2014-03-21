@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  var app = angular.module('generatorMeanstackApp', []);
+  var app = angular.module('generatorMeanstackApp', ['ngResource']);
   app.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
@@ -17,7 +17,7 @@
         controller: 'TestCtrl'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: 'views/test-bootstrap.html'
       });
   });
 })(); // <-- changed to immediately-invoked function expression to prevent strict error.

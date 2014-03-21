@@ -1,27 +1,26 @@
 <div class="container">
     <div class="page-header" id="top">
         <h1>Retrieving and Displaying Data<br/>
-            <small>Exploring methods of retrieving and displaying data using
-                AngularJS with the MEAN Stack.
-            </small>
+        <small>Exploring methods of retrieving and displaying data using
+        AngularJS with the MEAN Stack.
+        </small>
         </h1>
     </div>
-
     <div class="panel-group" id="accordion">
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <h3 class="panel-title">Function Returns Array <a
-                        class="pull-right"
-                        onclick="flipChevron($(this))"
-                        data-toggle="collapse" data-parent="#accordion"
-                        href="#collapseOne">
-                    <span class="glyphicon glyphicon-chevron-down"></span></a>
+                class="pull-right"
+                ng-click="flipChevron($(this))"
+                data-toggle="collapse" data-parent="#accordion"
+                href="#collapseOne">
+                <span class="glyphicon glyphicon-chevron-down"></span></a>
                 </h3>
             </div>
             <div id="collapseOne" class="panel-collapse collapse in">
                 <div class="panel-body">
                     <p>Function within the AngularJS Controller returns a static
-                        array of strings.</p>
+                    array of strings.</p>
                 </div>
                 <ul class="list-group">
                     <li class="list-group-item"
@@ -31,50 +30,71 @@
                 </ul>
             </div>
         </div>
-
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <h3 class="panel-title">AngularJS Service Returns Array <a
-                        class="pull-right"
-                        onclick="flipChevron($(this))"
-                        data-toggle="collapse" data-parent="#accordion"
-                        href="#collapseTwo">
-                    <span class="glyphicon glyphicon-chevron-down"></span>
+                class="pull-right"
+                ng-click="flipChevron($(this))"
+                data-toggle="collapse" data-parent="#accordion"
+                href="#collapseTwo">
+                <span class="glyphicon glyphicon-chevron-down"></span>
                 </a></h3>
             </div>
             <div id="collapseTwo" class="panel-collapse collapse in">
                 <div class="panel-body">
                     <p>AngularJS Service returns a static array of object
-                        literals to the controller.</p>
+                    literals to the controller.</p>
                 </div>
                 <ul class="nav nav-pills nav-stacked">
                     <li ng-repeat="stuff in meanStuff.components">
                         <a href="{{stuff.url}}"
-                           target="_blank">{{stuff.component}}</a>
+                        target="_blank">{{stuff.component}}</a>
                     </li>
                 </ul>
             </div>
         </div>
-
         <div class="panel panel-primary">
             <div class="panel-heading">
-                <h3 class="panel-title">AngularJS Factory Loads JSON <a
-                        class="pull-right"
-                        onclick="flipChevron($(this))"
-                        data-toggle="collapse" data-parent="#accordion"
-                        href="#collapseThree">
-                    <span class="glyphicon glyphicon-chevron-down"></span>
+                <h3 class="panel-title">AngularJS Factory Loads JSON File<a
+                class="pull-right"
+                ng-click="flipChevron($(this))"
+                data-toggle="collapse" data-parent="#accordion"
+                href="#collapseThree">
+                <span class="glyphicon glyphicon-chevron-down"></span>
                 </a></h3>
             </div>
             <div id="collapseThree" class="panel-collapse collapse in">
                 <div class="panel-body">
                     <p>AngularJS Factory returns contents of JSON file to the
-                        controller.</p>
+                    controller.</p>
                 </div>
                 <ul class="nav nav-pills nav-stacked">
                     <li ng-repeat="stuff in otherStuff.data.components">
                         <a href="{{stuff.url}}"
-                           target="_blank">{{stuff.component}}</a>
+                        target="_blank">{{stuff.component}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">MongoDB Returns Collection<a
+                class="pull-right"
+                ng-click="flipChevron($(this))"
+                data-toggle="collapse" data-parent="#accordion"
+                href="#collapseFour">
+                <span class="glyphicon glyphicon-chevron-down"></span>
+                </a></h3>
+            </div>
+            <div id="collapseFour" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <p>MongoDB database returns collection of documents to
+                    controller.</p>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item" ng-repeat="stuff in mongoStuff">
+                        <b>{{stuff.component}}</b>
+                        <div class="text-muted">{{stuff.description}}</div>
                     </li>
                 </ul>
             </div>
@@ -82,22 +102,24 @@
 
         <div class="panel panel-primary">
             <div class="panel-heading">
-                <h3 class="panel-title">MongoDB Returns Collection <a
-                        class="pull-right"
-                        onclick="flipChevron($(this))"
-                        data-toggle="collapse" data-parent="#accordion"
-                        href="#collapseFour">
-                    <span class="glyphicon glyphicon-chevron-down"></span>
+                <h3 class="panel-title">AngularJS Controller calls Google API <a
+                class="pull-right"
+                ng-click="flipChevron($(this))"
+                data-toggle="collapse" data-parent="#accordion"
+                href="#collapseFive">
+                <span class="glyphicon glyphicon-chevron-down"></span>
                 </a></h3>
             </div>
-            <div id="collapseFour" class="panel-collapse collapse in">
+            <div id="collapseFive" class="panel-collapse collapse in">
                 <div class="panel-body">
-                    <p>MongoDB database returns collection of documents to
-                        controller.</p>
+                    <p>AngularJS Controller calls Google Web Search API.</p>
                 </div>
                 <ul class="list-group">
-                    <li class="list-group-item" ng-repeat="stuff in mongoStuff">
-                        <b>{{stuff.component}}</b>: {{stuff.description}}
+                    <li class="list-group-item"
+                        ng-repeat="stuff in googleStuff.data.responseData.results">
+                        <a href="{{unescapedUrl.url}}"
+                        target="_blank"><b>{{stuff.visibleUrl}}</b></a>
+                        <div class="text-muted">{{stuff.titleNoFormatting}}</div>
                     </li>
                 </ul>
             </div>
@@ -107,10 +129,10 @@
 <div class="container">
     <div id="footer">
         <button class="btn btn-primary btn-sm" ng-click="changeView('test')">
-            Without Bootstrap
+        Without Bootstrap
         </button>
         <a class="btn-link pull-right" ng-click="scrollTo('top')">
-            <span class=" glyphicon glyphicon-arrow-up"></span>
-            Top of Page</a>
+        <span class=" glyphicon glyphicon-arrow-up"></span>
+        Top of Page</a>
     </div>
 </div>

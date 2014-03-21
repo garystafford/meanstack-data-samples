@@ -5,9 +5,10 @@ Explores various methods of retrieving and displaying data using AngularJS. Proj
 
 Contains examples of retrieving data using various AngularJS methods:
 * Function within AngularJS controller returns array of strings
-* AngularJS service returns an array of simple object literals to controller
-* AngularJS factory returns contents of JSON file to controller
+* AngularJS Service returns an array of simple object literals to controller
+* AngularJS Factory returns contents of JSON file to controller
 * MongoDB database returns collection of documents to controller
+* AngularJS Controller calls Google Web Search API
 
 ### Instructions to Use Project
 * Review the [generator-meanstack](https://github.com/wlepinski/generator-meanstack) `README.md`

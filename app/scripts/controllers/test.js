@@ -2,7 +2,7 @@
 
 // Function within AngularJS controller contains array of strings
 angular.module('generatorMeanstackApp')
-  .controller('TestCtrl', function ($scope, $http, $location, $anchorScroll, TestService, testFactory) {
+  .controller('TestCtrl', function ($scope, $http, $location, $anchorScroll, TestService, testFactory, googleSearchFactory) {
     $scope.yeomanStuff = function () {
       return [
         'yo',
@@ -39,7 +39,22 @@ angular.module('generatorMeanstackApp')
       $anchorScroll();
     };
 
+    // Used to change between views using button
     $scope.changeView = function (view) {
       $location.path(view); // path not hash
     };
+
+    $scope.flipChevron = function (obj) {
+      if (obj.hasClass('collapsed')) {
+        obj[0].firstElementChild.className = 'glyphicon glyphicon-chevron-down';
+      } else {
+        obj[0].firstElementChild.className = 'glyphicon glyphicon-chevron-up';
+      }
+    };
+
+    $scope.googleStuff = {};
+    promise = googleSearchFactory.getSearchResults();
+    promise.then(function (data) {
+      $scope.googleStuff = data;
+    });
   });
