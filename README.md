@@ -4,11 +4,11 @@ Explores various methods of retrieving and displaying data using AngularJS. Proj
 
 
 Contains examples of retrieving data using various AngularJS methods:
-* Function within AngularJS controller returns array of strings
-* AngularJS Service returns an array of simple object literals to controller
-* AngularJS Factory returns contents of JSON file to controller
-* MongoDB database returns collection of documents to controller
-* AngularJS Controller calls Google Web Search API
+* Function within AngularJS controller returns array of strings.
+* AngularJS Service returns an array of simple object literals to the controller.
+* AngularJS Factory returns the contents of JSON file to the controller.
+* MongoDB Database returns a collection of documents to the controller.
+* AngularJS Factory returns results from Google's RESTful Web Search API to the controller.
 
 ### Instructions to Use Project
 * Review the [generator-meanstack](https://github.com/wlepinski/generator-meanstack) `README.md`
@@ -47,9 +47,10 @@ grunt server
 ### Notes About project
 * Link to main AngularJS `test-bootstrap` view: [http://localhost:3000/#](http://localhost:3000/#).
 * HTTP GET call to MongoDB data: [http://localhost:3000/api/components](http://localhost:3000/api/components).
-* Deferred promises to perform actions asynchronously: [$http](http://docs.angularjs.org/api/ng/service/$http)
+* Deferred promises used to perform actions asynchronously: [$http](http://docs.angularjs.org/api/ng/service/$http)
 * Karma's default port `8080` to `8090` in `karma.conf.js` and `karma-e2e.conf.js` files. It conflicted with my installation of Apache and every other application that wants to use port `8080` by default.
 * The `grunt` command now runs without error. In the original project, `jshint` had a strict violation with `validthis`.
 * MongoDB, Mongoose, and Twitter Bootstrap added to project.
+* Karma unit tests incldued for controller and services.
 
-![Chrome on Android 4.4](https://github.com/garystafford/meanstack-data-samples/blob/master/public/images/Screenshot_2014-03-18-20-41-48.png?raw=true =50x)
+![Chrome on Android 4.4](https://github.com/garystafford/meanstack-data-samples/blob/master/public/images/Screenshot_2014-03-18-20-41-48.png?raw=true)

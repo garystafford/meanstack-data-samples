@@ -11,7 +11,7 @@
             <div class="panel-heading">
                 <h3 class="panel-title">Function Returns Array <a
                 class="pull-right"
-                ng-click="flipChevron($(this))"
+                ng-click="flipChevron($event)"
                 data-toggle="collapse" data-parent="#accordion"
                 href="#collapseOne">
                 <span class="glyphicon glyphicon-chevron-down"></span></a>
@@ -32,9 +32,9 @@
         </div>
         <div class="panel panel-primary">
             <div class="panel-heading">
-                <h3 class="panel-title">AngularJS Service Returns Array <a
+                <h3 class="panel-title">Service Returns Array <a
                 class="pull-right"
-                ng-click="flipChevron($(this))"
+                ng-click="flipChevron($event)"
                 data-toggle="collapse" data-parent="#accordion"
                 href="#collapseTwo">
                 <span class="glyphicon glyphicon-chevron-down"></span>
@@ -55,9 +55,9 @@
         </div>
         <div class="panel panel-primary">
             <div class="panel-heading">
-                <h3 class="panel-title">AngularJS Factory Loads JSON File<a
+                <h3 class="panel-title">Factory Loads JSON File<a
                 class="pull-right"
-                ng-click="flipChevron($(this))"
+                ng-click="flipChevron($event)"
                 data-toggle="collapse" data-parent="#accordion"
                 href="#collapseThree">
                 <span class="glyphicon glyphicon-chevron-down"></span>
@@ -65,7 +65,7 @@
             </div>
             <div id="collapseThree" class="panel-collapse collapse in">
                 <div class="panel-body">
-                    <p>AngularJS Factory returns contents of JSON file to the
+                    <p>AngularJS Factory returns the contents of JSON file to the
                     controller.</p>
                 </div>
                 <ul class="nav nav-pills nav-stacked">
@@ -80,7 +80,7 @@
             <div class="panel-heading">
                 <h3 class="panel-title">MongoDB Returns Collection<a
                 class="pull-right"
-                ng-click="flipChevron($(this))"
+                ng-click="flipChevron($event)"
                 data-toggle="collapse" data-parent="#accordion"
                 href="#collapseFour">
                 <span class="glyphicon glyphicon-chevron-down"></span>
@@ -88,7 +88,7 @@
             </div>
             <div id="collapseFour" class="panel-collapse collapse in">
                 <div class="panel-body">
-                    <p>MongoDB database returns collection of documents to
+                    <p>MongoDB Database returns a collection of documents to
                     controller.</p>
                 </div>
                 <ul class="list-group">
@@ -102,9 +102,9 @@
 
         <div class="panel panel-primary">
             <div class="panel-heading">
-                <h3 class="panel-title">AngularJS Controller calls Google API <a
+                <h3 class="panel-title">Factory calls Google API <a
                 class="pull-right"
-                ng-click="flipChevron($(this))"
+                ng-click="flipChevron($event)"
                 data-toggle="collapse" data-parent="#accordion"
                 href="#collapseFive">
                 <span class="glyphicon glyphicon-chevron-down"></span>
@@ -112,7 +112,7 @@
             </div>
             <div id="collapseFive" class="panel-collapse collapse in">
                 <div class="panel-body">
-                    <p>AngularJS Controller calls Google Web Search API.</p>
+                    <p>AngularJS Factory returns results from Google's RESTful Web Search API to the controller.</p>
                 </div>
                 <ul class="list-group">
                     <li class="list-group-item"

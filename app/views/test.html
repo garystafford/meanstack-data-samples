@@ -13,14 +13,14 @@
             <a href="{{stuff.url}}" target="_blank">{{stuff.component}}</a>
         </li>
     </ul>
-    <p>AngularJS Factory returns contents of JSON file to the
+    <p>AngularJS Factory returns the contents of JSON file to the
         controller.</p>
     <ul>
         <li ng-repeat="stuff in otherStuff.data.components">
             <a href="{{stuff.url}}" target="_blank">{{stuff.component}}</a>
         </li>
     </ul>
-    <p>MongoDB database returns collection of documents to
+    <p>MongoDB Database returns a collection of documents to the
         controller.</p>
     <ul>
         <li ng-repeat="stuff in mongoStuff">
@@ -28,7 +28,7 @@
         </li>
     </ul>
 </div>
-<p>AngularJS Controller calls Google Web Search API.</p>
+<p>AngularJS Factory returns results from Google's RESTful Web Search API to the controller.</p>
 <ul>
     <li ng-repeat="stuff in googleStuff.data.responseData.results">
         <a href="{{unescapedUrl.url}}"
