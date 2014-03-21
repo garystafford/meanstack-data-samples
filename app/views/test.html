@@ -1,52 +1,72 @@
 <div>
-    <h2>Test View</h2>
+  <div>
+    <h2>Retrieving Data with AngularJS</h2>
 
+    <p>Methods of retrieving data with AngularJS and the MEAN Stack.</p>
+    <hr/>
+  </div>
+
+  <div>
     <p>Function within the AngularJS Controller returns a static
-        array of strings.</p>
+      array of strings.</p>
     <ul>
-        <li ng-repeat="stuff in yeomanStuff()">{{stuff}}</li>
+      <li ng-repeat="stuff in yeomanStuff()">{{stuff}}</li>
     </ul>
     <p>AngularJS Service returns a static array of object
-        literals to the controller.</p>
+      literals to the controller.</p>
     <ul>
-        <li ng-repeat="stuff in meanStuff.components">
-            <a href="{{stuff.url}}" target="_blank">{{stuff.component}}</a>
-        </li>
+      <li ng-repeat="stuff in meanStuff.components">
+        <a href="{{stuff.url}}" target="_blank">{{stuff.component}}</a>
+      </li>
     </ul>
+    <hr/>
+  </div>
+
+  <div>
     <p>AngularJS Factory returns the contents of JSON file to the
-        controller.</p>
+      controller.</p>
     <ul>
-        <li ng-repeat="stuff in otherStuff.data.components">
-            <a href="{{stuff.url}}" target="_blank">{{stuff.component}}</a>
-        </li>
+      <li ng-repeat="stuff in otherStuff.data.components">
+        <a href="{{stuff.url}}" target="_blank">{{stuff.component}}</a>
+      </li>
     </ul>
+    <hr/>
+  </div>
+
+  <div>
     <p>MongoDB Database returns a collection of documents to the
-        controller.</p>
+      controller.</p>
     <ul>
-        <li ng-repeat="stuff in mongoStuff">
-            <b>{{stuff.component}}</b>: {{stuff.description}}
-        </li>
+      <li ng-repeat="stuff in mongoStuff">
+        <b>{{stuff.component}}</b>: {{stuff.description}}
+      </li>
     </ul>
-</div>
-<p>AngularJS Factory returns results from Google's RESTful Web Search API to the controller.</p>
-<ul>
-    <li ng-repeat="stuff in googleStuff.data.responseData.results">
+    <hr/>
+  </div>
+
+  <div>
+    <p>AngularJS Factory returns top 8 'mean stack' search results from
+      Google's RESTful Web Search API to the controller.</p>
+    <ul>
+      <li ng-repeat="stuff in googleStuff.data.responseData.results">
         <a href="{{unescapedUrl.url}}"
            target="_blank">{{stuff.visibleUrl}}</a>
         <br/>
         {{stuff.titleNoFormatting}}
-    </li>
-</ul>
+      </li>
+    </ul>
+    <hr/>
+  </div>
 </div>
-</br>
 <div class="container">
-    <div id="footer">
-        <button class="btn btn-primary btn-sm"
-                ng-click="changeView('test-bootstrap')">
-            With Bootstrap
-        </button>
-        <a class="btn-link pull-right" ng-click="scrollTo('top')">
-            <span class=" glyphicon glyphicon-arrow-down"></span>
-            Top of Page</a>
-    </div>
+  <div id="footer">
+    </br>
+    <button class="btn btn-primary btn-sm"
+            ng-click="changeView('test-bootstrap')">
+      With Bootstrap
+    </button>
+    <a class="btn-link pull-right" ng-click="scrollTo('top')">
+      <span class=" glyphicon glyphicon-arrow-down"></span>
+      Top of Page</a>
+  </div>
 </div>
