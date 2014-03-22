@@ -47,8 +47,6 @@ grunt server
 ### Notes About project
 * Link to main AngularJS `test-bootstrap` view: [http://localhost:3000/#](http://localhost:3000/#).
 * HTTP GET call to MongoDB data: [http://localhost:3000/api/components](http://localhost:3000/api/components).
-* HTTP JSONP call to Google Web Search API:
-[https://ajax.googleapis.com/ajax/services/search/web?v=1.0&q=mean%20stack&rsz=8&callback=JSON_CALLBACK](https://ajax.googleapis.com/ajax/services/search/web?v=1.0&q=mean%20stack&rsz=8&callback=JSON_CALLBACK}.
 * Deferred promises used to perform actions asynchronously: [$http](http://docs.angularjs.org/api/ng/service/$http)
 * Karma's default port `8080` to `8090` in `karma.conf.js` and `karma-e2e.conf.js` files. It conflicted with my installation of Apache and every other application that wants to use port `8080` by default.
 * The `grunt` command now runs without error. In the original project, `jshint` had a strict violation with `validthis`.
