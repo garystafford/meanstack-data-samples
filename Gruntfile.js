@@ -14,6 +14,9 @@ module.exports = function (grunt) {
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
   // show elapsed time at the end
   require('time-grunt')(grunt);
+  // load all grunt tasks matching the `grunt-*` pattern
+  // https://github.com/sindresorhus/load-grunt-tasks
+  require('load-grunt-tasks')(grunt);
 
   // configurable paths
   var yeomanConfig = {
@@ -23,9 +26,15 @@ module.exports = function (grunt) {
 
   try {
     yeomanConfig.app = require('./bower.json').appPath || yeomanConfig.app;
-  } catch (e) {}
+  } catch (e) {
+  }
 
   grunt.loadNpmTasks('grunt-express');
+
+  // allows you to both update your dependencies
+  // and devDependencies with an automated task.
+  // https://www.npmjs.org/package/grunt-dev-update
+  grunt.loadNpmTasks('grunt-dev-update');
 
   grunt.initConfig({
     yeoman: yeomanConfig,
@@ -82,14 +91,16 @@ module.exports = function (grunt) {
     },
     clean: {
       dist: {
-        files: [{
-          dot: true,
-          src: [
-            '.tmp',
-            '<%= yeoman.dist %>/*',
-            '!<%= yeoman.dist %>/.git*'
-          ]
-        }]
+        files: [
+          {
+            dot: true,
+            src: [
+              '.tmp',
+              '<%= yeoman.dist %>/*',
+              '!<%= yeoman.dist %>/.git*'
+            ]
+          }
+        ]
       },
       server: '.tmp'
     },
@@ -104,29 +115,33 @@ module.exports = function (grunt) {
     },
     coffee: {
       dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.app %>/scripts',
-          src: '{,*/}*.coffee',
-          dest: '.tmp/scripts',
-          ext: '.js'
-        }]
+        files: [
+          {
+            expand: true,
+            cwd: '<%= yeoman.app %>/scripts',
+            src: '{,*/}*.coffee',
+            dest: '.tmp/scripts',
+            ext: '.js'
+          }
+        ]
       },
       test: {
-        files: [{
-          expand: true,
-          cwd: 'test/spec',
-          src: '{,*/}*.coffee',
-          dest: '.tmp/spec',
-          ext: '.js'
-        }]
+        files: [
+          {
+            expand: true,
+            cwd: 'test/spec',
+            src: '{,*/}*.coffee',
+            dest: '.tmp/spec',
+            ext: '.js'
+          }
+        ]
       }
     },
     // not used since Uglify task does concat,
     // but still available if needed
     /*concat: {
-      dist: {}
-    },*/
+     dist: {}
+     },*/
     rev: {
       dist: {
         files: {
@@ -154,12 +169,14 @@ module.exports = function (grunt) {
     },
     imagemin: {
       dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.app %>/images',
-          src: '{,*/}*.{png,jpg,jpeg}',
-          dest: '<%= yeoman.dist %>/images'
-        }]
+        files: [
+          {
+            expand: true,
+            cwd: '<%= yeoman.app %>/images',
+            src: '{,*/}*.{png,jpg,jpeg}',
+            dest: '<%= yeoman.dist %>/images'
+          }
+        ]
       }
     },
     cssmin: {
@@ -179,46 +196,51 @@ module.exports = function (grunt) {
       dist: {
         options: {
           /*removeCommentsFromCDATA: true,
-          // https://github.com/yeoman/grunt-usemin/issues/44
-          //collapseWhitespace: true,
-          collapseBooleanAttributes: true,
-          removeAttributeQuotes: true,
-          removeRedundantAttributes: true,
-          useShortDoctype: true,
-          removeEmptyAttributes: true,
-          removeOptionalTags: true*/
+           // https://github.com/yeoman/grunt-usemin/issues/44
+           //collapseWhitespace: true,
+           collapseBooleanAttributes: true,
+           removeAttributeQuotes: true,
+           removeRedundantAttributes: true,
+           useShortDoctype: true,
+           removeEmptyAttributes: true,
+           removeOptionalTags: true*/
         },
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.app %>',
-          src: ['*.html', 'views/*.html'],
-          dest: '<%= yeoman.dist %>'
-        }]
+        files: [
+          {
+            expand: true,
+            cwd: '<%= yeoman.app %>',
+            src: ['*.html', 'views/*.html'],
+            dest: '<%= yeoman.dist %>'
+          }
+        ]
       }
     },
     // Put files not handled in other tasks here
     copy: {
       dist: {
-        files: [{
-          expand: true,
-          dot: true,
-          cwd: '<%= yeoman.app %>',
-          dest: '<%= yeoman.dist %>',
-          src: [
-            '*.{ico,png,txt}',
-            '.htaccess',
-            'bower_components/**/*',
-            'images/{,*/}*.{gif,webp,svg}',
-            'styles/fonts/*'
-          ]
-        }, {
-          expand: true,
-          cwd: '.tmp/images',
-          dest: '<%= yeoman.dist %>/images',
-          src: [
-            'generated/*'
-          ]
-        }]
+        files: [
+          {
+            expand: true,
+            dot: true,
+            cwd: '<%= yeoman.app %>',
+            dest: '<%= yeoman.dist %>',
+            src: [
+              '*.{ico,png,txt}',
+              '.htaccess',
+              'bower_components/**/*',
+              'images/{,*/}*.{gif,webp,svg}',
+              'styles/fonts/*'
+            ]
+          },
+          {
+            expand: true,
+            cwd: '.tmp/images',
+            dest: '<%= yeoman.dist %>/images',
+            src: [
+              'generated/*'
+            ]
+          }
+        ]
       }
     },
     concurrent: {
@@ -247,12 +269,14 @@ module.exports = function (grunt) {
     },
     ngmin: {
       dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.dist %>/scripts',
-          src: '*.js',
-          dest: '<%= yeoman.dist %>/scripts'
-        }]
+        files: [
+          {
+            expand: true,
+            cwd: '<%= yeoman.dist %>/scripts',
+            src: '*.js',
+            dest: '<%= yeoman.dist %>/scripts'
+          }
+        ]
       }
     },
     uglify: {
@@ -261,6 +285,20 @@ module.exports = function (grunt) {
           '<%= yeoman.dist %>/scripts/scripts.js': [
             '<%= yeoman.dist %>/scripts/scripts.js'
           ]
+        }
+      }
+    },
+    devUpdate: {
+      main: {
+        options: {
+          updateType: 'report', //just report outdated packages
+          reportUpdated: false, //don't report already updated packages
+          semver: true, //use package.json semver rules when updating
+          packages: { //what packages to check
+            devDependencies: true, //only devDependencies
+            dependencies: false
+          },
+          packageJson: null //find package.json automatically
         }
       }
     }
