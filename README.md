@@ -10,7 +10,7 @@ Contains examples of retrieving data using various AngularJS methods:
 * MongoDB Database returns a collection of documents to the controller.
 * AngularJS Factory returns results from Google's RESTful Web Search API to the controller.
 
-### Instructions to Use Project
+### Project Instructions
 * Review the [generator-meanstack](https://github.com/wlepinski/generator-meanstack) `README.md`
 * Project requires MongoDB, Node, Express, and yo
 * Set the `NODE_ENV` environment variable to `test`
@@ -44,13 +44,14 @@ grunt
 grunt server
 ```
 
-### Notes About project
+### Notes About Project
+* Original project based on yeoman's [generator-angular](http://yeoman.io/). All generator commands work.
 * Link to main AngularJS `test-bootstrap` view: [http://localhost:3000/#](http://localhost:3000/#).
 * HTTP GET call to MongoDB data: [http://localhost:3000/api/components](http://localhost:3000/api/components).
 * Deferred promises used to perform actions asynchronously: [$http](http://docs.angularjs.org/api/ng/service/$http)
+* Karma unit tests included for controller and services.
 * Karma's default port `8080` to `8090` in `karma.conf.js` and `karma-e2e.conf.js` files. It conflicted with my installation of Apache and every other application that wants to use port `8080` by default.
 * The `grunt` command now runs without error. In the original project, `jshint` had a strict violation with `validthis`.
-* MongoDB, Mongoose, and Twitter Bootstrap added to project.
-* Karma unit tests included for controller and services.
 
+Preview of project on Chrome for Android:
 ![Chrome on Android ](https://github.com/garystafford/meanstack-data-samples/blob/master/public/images/MobileView.png?raw=true)
