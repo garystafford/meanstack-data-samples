@@ -6,7 +6,7 @@
  */
 
 angular.module('generatorMeanstackApp')
-  .factory('googleSearchFactory', function ($q, $http) {
+  .factory('GoogleFactory', function ($q, $http) {
     return {
       getSearchResults: function () {
         var deferred = $q.defer();

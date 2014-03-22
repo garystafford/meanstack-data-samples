@@ -1,11 +1,11 @@
 'use strict';
 
-describe('Controller: TestCtrl', function($httpBackend) {
+describe('Controller: DataController', function($httpBackend) {
 
   // load the controller's module
   beforeEach(module('generatorMeanstackApp'));
 
-  var TestCtrl,
+  var DataController,
     scope;
 
   // Initialize the controller and a mock scope
@@ -69,7 +69,7 @@ describe('Controller: TestCtrl', function($httpBackend) {
     });
 
     scope = $rootScope.$new();
-    TestCtrl = $controller('TestCtrl', {
+    DataController = $controller('DataController', {
       $scope: scope
     });
 

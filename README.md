@@ -54,5 +54,5 @@ grunt server
 * The `grunt` command now runs without error. In the original project, `jshint` had a strict violation with `validthis`.
 
 Preview of project on Chrome for Android:
-  
+
 ![Chrome on Android ](https://github.com/garystafford/meanstack-data-samples/blob/master/public/images/MobileView.png?raw=true)

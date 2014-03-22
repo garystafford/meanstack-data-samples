@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('generatorMeanstackApp')
-  .service('TestService', function ($q) {
+  .service('MeanService', function ($q) {
     this.getMeanStuff = function () {
       var deferred = $q.defer();
 

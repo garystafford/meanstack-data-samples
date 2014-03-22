@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('generatorMeanstackApp')
-  .factory('testFactory', function($q, $http) {
+  .factory('JsonFactory', function($q, $http) {
     return {
       getOtherStuff: function() {
         var deferred = $q.defer();

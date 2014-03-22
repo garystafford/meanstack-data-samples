@@ -2,7 +2,7 @@
 
 // Function within the AngularJS Controller returns a static array of strings.
 angular.module('generatorMeanstackApp')
-  .controller('TestCtrl', function ($scope, $http, $location, $anchorScroll, TestService, testFactory, googleSearchFactory) {
+  .controller('DataController', function ($scope, $http, $location, $anchorScroll, MeanService, JsonFactory, GoogleFactory) {
     $scope.yeomanStuff = function () {
       return [
         'yo',
@@ -13,14 +13,14 @@ angular.module('generatorMeanstackApp')
 
     // AngularJS Service returns a static array of object literals to the controller.
     $scope.meanStuff = {};
-    var promise = TestService.getMeanStuff();
+    var promise = MeanService.getMeanStuff();
     promise.then(function (data) {
       $scope.meanStuff = data;
     });
 
     // AngularJS Factory returns the contents of JSON file to the controller.
     $scope.otherStuff = {};
-    promise = testFactory.getOtherStuff();
+    promise = JsonFactory.getOtherStuff();
     promise.then(function (data) {
       $scope.otherStuff = data;
     });
@@ -37,7 +37,7 @@ angular.module('generatorMeanstackApp')
     // AngularJS Factory returns results from
     // Google's RESTful Web Search API to the controller.
     $scope.googleStuff = {};
-    promise = googleSearchFactory.getSearchResults();
+    promise = GoogleFactory.getSearchResults();
     promise.then(function (data) {
       $scope.googleStuff = data;
     });
@@ -55,7 +55,7 @@ angular.module('generatorMeanstackApp')
 
     // Flip chevron on click
     $scope.flipChevron = function ($event) {
-      if ($event.target.parentElement.className == 'pull-right collapsed') {
+      if ($event.target.parentElement.className === 'pull-right collapsed') {
         $event.target.className = 'glyphicon glyphicon-chevron-up';
       } else {
         $event.target.className = 'glyphicon glyphicon-chevron-down';
