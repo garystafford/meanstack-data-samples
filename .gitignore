@@ -3,6 +3,6 @@
 .sass-cache/
 node_modules/
 public/lib
-dist
+/dist
 .idea
-!/app/bower_components/bootstrap/dist
+#!/app/bower_components/bootstrap/dist
