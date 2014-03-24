@@ -16,7 +16,7 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
   // load all grunt tasks matching the `grunt-*` pattern
   // https://github.com/sindresorhus/load-grunt-tasks
-  require('load-grunt-tasks')(grunt);
+  //require('load-grunt-tasks')(grunt);
 
   // configurable paths
   var yeomanConfig = {
@@ -296,7 +296,7 @@ module.exports = function (grunt) {
           semver: true, //use package.json semver rules when updating
           packages: { //what packages to check
             devDependencies: true, //only devDependencies
-            dependencies: false
+            dependencies: true
           },
           packageJson: null //find package.json automatically
         }
