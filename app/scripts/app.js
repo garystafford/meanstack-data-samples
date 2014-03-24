@@ -1,15 +1,15 @@
 'use strict';
 
-(function () {
+(function() {
   var app = angular.module('generatorMeanstackApp', ['ngResource']);
-  app.config(function ($routeProvider) {
+  app.config(function($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/data-bootstrap.html',
         controller: 'DataController'
       })
       .when('/data', {
-        templateUrl: 'views/data-nobootstrap.html',
+        templateUrl: 'views/data-no-bootstrap.html',
         controller: 'DataController'
       })
       .when('/data-bootstrap', {
