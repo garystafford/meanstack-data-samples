@@ -1,8 +1,9 @@
 'use strict';
 
-// Function within the AngularJS Controller returns a static array of strings.
 angular.module('generatorMeanstackApp')
   .controller('DataController', function ($scope, $http, $location, $anchorScroll, MeanService, JsonFactory, GoogleFactory) {
+
+    // Function within the AngularJS Controller returns a static array of strings.
     $scope.yeomanStuff = function () {
       return [
         'yo',
