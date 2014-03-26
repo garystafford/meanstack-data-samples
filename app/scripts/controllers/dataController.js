@@ -1,8 +1,7 @@
 'use strict';
 
 angular.module('generatorMeanstackApp')
-  .controller('DataController', function ($scope, $http, $location, $anchorScroll,
-                                          meanService, jsonFactory, mongoFactory, googleFactory) {
+  .controller('DataController', function ($scope, $http, $location, $anchorScroll, meanService, jsonFactory, mongoFactory, googleFactory) {
 
     // Function within the AngularJS Controller returns a static array of strings.
     $scope.yeomanStuff = function () {
