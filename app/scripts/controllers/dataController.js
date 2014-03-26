@@ -1,7 +1,8 @@
 'use strict';
 
 angular.module('generatorMeanstackApp')
-  .controller('DataController', function ($scope, $http, $location, $anchorScroll, MeanService, JsonFactory, GoogleFactory) {
+  .controller('DataController', function ($scope, $http, $location, $anchorScroll,
+                                          meanService, jsonFactory, mongoFactory, googleFactory) {
 
     // Function within the AngularJS Controller returns a static array of strings.
     $scope.yeomanStuff = function () {
@@ -14,31 +15,30 @@ angular.module('generatorMeanstackApp')
 
     // AngularJS Service returns a static array of object literals to the controller.
     $scope.meanStuff = {};
-    var promise = MeanService.getMeanStuff();
+    var promise = meanService.getMeanStuff();
     promise.then(function (data) {
       $scope.meanStuff = data;
     });
 
     // AngularJS Factory returns the contents of JSON file to the controller.
     $scope.otherStuff = {};
-    promise = JsonFactory.getOtherStuff();
+    promise = jsonFactory.getOtherStuff();
     promise.then(function (data) {
       $scope.otherStuff = data;
     });
 
-    // MongoDB Database returns a collection of documents to the controller.
-    $http.get('/api/components')
-      .success(function (data) {
-        $scope.mongoStuff = data;
-      })
-      .error(function (data) {
-        console.log('Error: ' + data);
-      });
+    // AngularJS Factory returns a collection of documents
+    // from MongoDB Database to the controller.
+    $scope.otherStuff = {};
+    promise = mongoFactory.getMongoStuff();
+    promise.then(function (data) {
+      $scope.mongoStuff = data;
+    });
 
     // AngularJS Factory returns results from
     // Google's RESTful Web Search API to the controller.
     $scope.googleStuff = {};
-    promise = GoogleFactory.getSearchResults();
+    promise = googleFactory.getSearchResults();
     promise.then(function (data) {
       $scope.googleStuff = data;
     });

@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('generatorMeanstackApp')
-  .factory('JsonFactory', function($q, $http) {
+  .factory('jsonFactory', function ($q, $http) {
     return {
-      getOtherStuff: function() {
+      getOtherStuff: function () {
         var deferred = $q.defer();
 
         $http.get('data/otherStuff.json').then(function(data) {

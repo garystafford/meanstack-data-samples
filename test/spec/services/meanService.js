@@ -1,18 +1,18 @@
 'use strict';
 
-describe('Service: MeanService', function () {
+describe('Service: meanService', function () {
 
   // load the service's module
   beforeEach(module('generatorMeanstackApp'));
 
   // instantiate service
-  var MeanService;
-  beforeEach(inject(function (_MeanService_) {
-    MeanService = _MeanService_;
+  var meanService;
+  beforeEach(inject(function (_meanService_) {
+    meanService = _meanService_;
   }));
 
   it('should do something', function () {
-    expect(!!MeanService).toBe(true);
+    expect(!!meanService).toBe(true);
   });
 
 });
