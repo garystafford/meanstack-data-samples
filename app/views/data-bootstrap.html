@@ -44,6 +44,7 @@
         <div class="panel-body">
           <p>AngularJS Service returns a static array of object
             literals to the controller.</p>
+          <hr>
         </div>
         <ul class="nav nav-pills nav-stacked">
           <li ng-repeat="stuff in meanStuff.components">
@@ -68,11 +69,12 @@
         <div class="panel-body">
           <p>AngularJS Factory returns the contents of JSON file to the
             controller.</p>
+          <hr>
         </div>
         <ul class="nav nav-pills nav-stacked">
           <li ng-repeat="stuff in otherStuff.data.components">
             <a href="{{stuff.url}}"
-               target="_blank">{{stuff.component}} ({{stuff.url}}</a>
+               target="_blank">{{stuff.component}}</a>
           </li>
         </ul>
       </div>
