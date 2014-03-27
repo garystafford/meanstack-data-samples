@@ -1,12 +1,12 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var ComponentSchema = new Schema({
+var componentSchema = new Schema({
   component: String,
   url: String
 });
 
-module.exports = mongoose.model('Component', ComponentSchema);
+module.exports = mongoose.model('Component', componentSchema);
 
 /*
 Shorthand method for all above code:
