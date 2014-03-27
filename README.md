@@ -1,4 +1,4 @@
-## Retrieving Data with MEAN Stack
+## Retrieving Data with AngularJS and MEAN Stack
 ### Overview
 Explores various methods of retrieving and displaying data using AngularJS. Project based on wlepinski's [generator-meanstack](https://github.com/wlepinski/generator-meanstack), with MongoDB, Mongoose, and Twitter Bootstrap added.
 
