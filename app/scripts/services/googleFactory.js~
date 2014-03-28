@@ -17,7 +17,7 @@ angular.module('generatorMeanstackApp')
         var arg = {};
         arg.version = '1.0';
         arg.searchTerm = 'mean%20stack';
-        arg.results = '8';
+        arg.results = '5';
         arg.callback = 'JSON_CALLBACK';
 
         var params = '?v=' + arg.version + '&q=' + arg.searchTerm + '&rsz=' +
