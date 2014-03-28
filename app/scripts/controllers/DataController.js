@@ -14,33 +14,45 @@ angular.module('generatorMeanstackApp')
 
     // AngularJS Service returns a static array of object literals to the controller.
     $scope.meanStuff = {};
-    var promise = meanService.getMeanStuff();
-    promise.then(function (data) {
-      $scope.meanStuff = data;
-    });
+    meanService.getMeanStuff()
+      .then(function (data) { // success
+        $scope.meanStuff = data;
+      },
+      function () {// failure
+        console.log('meanService.getMeanStuff() failed');
+      });
 
     // AngularJS Factory returns the contents of JSON file to the controller.
     $scope.otherStuff = {};
-    promise = jsonFactory.getOtherStuff();
-    promise.then(function (data) {
-      $scope.otherStuff = data;
-    });
+    jsonFactory.getOtherStuff()
+      .then(function (data) {
+        $scope.otherStuff = data;
+      },
+      function () {// failure
+        console.log('jsonFactory.getOtherStuff() failed');
+      });
 
     // AngularJS Factory returns a collection of documents
     // from MongoDB Database to the controller.
     $scope.otherStuff = {};
-    promise = mongoFactory.getMongoStuff();
-    promise.then(function (data) {
-      $scope.mongoStuff = data;
-    });
+    mongoFactory.getMongoStuff()
+      .then(function (data) {
+        $scope.mongoStuff = data;
+      },
+      function () {// failure
+        console.log('mongoFactory.getMongoStuff() failed');
+      });
 
     // AngularJS Factory returns results from
     // Google's RESTful Web Search API to the controller.
     $scope.googleStuff = {};
-    promise = googleFactory.getSearchResults();
-    promise.then(function (data) {
-      $scope.googleStuff = data;
-    });
+    googleFactory.getSearchResults()
+      .then(function (data) {
+        $scope.googleStuff = data;
+      },
+      function () {// failure
+        console.log('googleFactory.getSearchResults() failed');
+      });
 
     // Return to top (or other anchor)
     $scope.scrollTo = function (id) {
