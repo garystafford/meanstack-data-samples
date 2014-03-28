@@ -6,3 +6,4 @@ public/lib
 /dist
 .idea
 #!/app/bower_components/bootstrap/dist
+*~
