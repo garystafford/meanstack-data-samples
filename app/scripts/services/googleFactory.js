@@ -9,7 +9,7 @@ angular.module('generatorMeanstackApp')
   .factory('googleFactory', function ($q, $http) {
     return {
       getSearchResults: function () {
-        var deferred = $q.defer();
+        var deferred = $q.defer(); // new instance of Deferred is constructed
 
         var host = 'https://ajax.googleapis.com/ajax/services/search/web';
 
@@ -23,11 +23,11 @@ angular.module('generatorMeanstackApp')
         var params = '?v=' + arg.version + '&q=' + arg.searchTerm + '&rsz=' +
           arg.results + '&callback=' + arg.callback;
 
-        $http.jsonp(host + params).then(function (data) {
-          deferred.resolve(data);
+        $http.jsonp(host + params).then(function (data) { // promise success callback
+          deferred.resolve(data); // resolves Deferred object and calls doneCallback of '.then' method with 'data' arg
         });
 
-        return deferred.promise;
+        return deferred.promise; // returns the Deferred’s Promise object
       }
     };
   });
