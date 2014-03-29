@@ -3,7 +3,7 @@
 angular.module('generatorMeanstackApp')
   .service('meanService', function () {
     this.getMeanStuff = function () {
-      var components = {
+      return {
         components: [
           {
             component: 'MongoDB',
@@ -23,7 +23,5 @@ angular.module('generatorMeanstackApp')
           }
         ]
       };
-
-      return components;
     };
   });
