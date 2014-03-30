@@ -4,13 +4,15 @@ angular.module('generatorMeanstackApp')
   .factory('jsonFactory', function ($q, $http) {
     return {
       getOtherStuff: function () {
-        var deferred = $q.defer(); // new instance of Deferred is constructed
+        var deferred = $q.defer();
 
-        $http.get('data/otherStuff.json').then(function (data) { // promise success callback
-          deferred.resolve(data); // resolves Deferred object and calls doneCallback of '.then' method with 'data' arg
+        $http.get('data/otherStuff.json').then(function (response) {
+          deferred.resolve(response);
+        }, function (error) {
+          console.error(error);
         });
 
-        return deferred.promise; // returns the Deferred’s Promise object
+        return deferred.promise;
       }
     };
   });

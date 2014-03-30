@@ -16,40 +16,38 @@ angular.module('generatorMeanstackApp')
     $scope.meanStuff = {};
     try {
       $scope.meanStuff = meanService.getMeanStuff();
-    } catch (err) {
-      console.error('meanService.getMeanStuff() failed with error: ' + err.message);
+    } catch (error) {
+      console.error(error);
     }
 
     // AngularJS Factory returns the contents of JSON file to the controller.
     $scope.otherStuff = {};
     jsonFactory.getOtherStuff()
-      .then(function (data) {
-        $scope.otherStuff = data;
-      },
-      function () { // failure
-        console.log('jsonFactory.getOtherStuff() failed');
+      .then(function (response) {
+        $scope.otherStuff = response;
+      }, function (error) {
+        console.error(error);
       });
+
 
     // AngularJS Factory returns a collection of documents
     // from MongoDB Database to the controller.
-    $scope.otherStuff = {};
+    $scope.mongoStuff = {};
     mongoFactory.getMongoStuff()
-      .then(function (data) {
-        $scope.mongoStuff = data;
-      },
-      function () { // failure
-        console.log('mongoFactory.getMongoStuff() failed');
+      .then(function (response) {
+        $scope.mongoStuff = response;
+      }, function (error) {
+        console.error(error);
       });
 
     // AngularJS Factory returns results from
     // Google's RESTful Web Search API to the controller.
     $scope.googleStuff = {};
     googleFactory.getSearchResults()
-      .then(function (data) {
-        $scope.googleStuff = data;
-      },
-      function () { // failure
-        console.log('googleFactory.getSearchResults() failed');
+      .then(function (response) {
+        $scope.googleStuff = response;
+      }, function (error) {
+        console.error(error);
       });
 
     // Return to top (or other anchor)

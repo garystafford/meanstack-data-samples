@@ -4,17 +4,17 @@ angular.module('generatorMeanstackApp')
   .factory('mongoFactory', function ($q, $http) {
     return {
       getMongoStuff: function () {
-        var deferred = $q.defer(); // new instance of Deferred is constructed
+        var deferred = $q.defer();
 
         $http.get('/api/components')
-          .success(function (data) { // promise success callback
-            deferred.resolve(data); // resolves Deferred object and calls doneCallback of '.then' method with 'data' arg
+          .success(function (data) {
+            deferred.resolve(data);
           })
-          .error(function (data) { //promise error callback
+          .error(function (data) {
             console.log('Error: ' + data);
           });
 
-        return deferred.promise; // returns the Deferred’s Promise object
+        return deferred.promise;
       }
     };
   });

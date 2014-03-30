@@ -9,25 +9,27 @@ angular.module('generatorMeanstackApp')
   .factory('googleFactory', function ($q, $http) {
     return {
       getSearchResults: function () {
-        var deferred = $q.defer(); // new instance of Deferred is constructed
+        var deferred = $q.defer();
 
         var host = 'https://ajax.googleapis.com/ajax/services/search/web';
 
         // URL arguments: https://developers.google.com/web-search/docs/reference
-        var arg = {};
-        arg.version = '1.0';
-        arg.searchTerm = 'mean%20stack';
-        arg.results = '8';
-        arg.callback = 'JSON_CALLBACK';
+        var args = {};
+        args.version = '1.0';
+        args.searchTerm = 'mean%20stack';
+        args.results = '8';
+        args.callback = 'JSON_CALLBACK';
 
-        var params = '?v=' + arg.version + '&q=' + arg.searchTerm + '&rsz=' +
-          arg.results + '&callback=' + arg.callback;
+        var params = '?v=' + args.version + '&q=' + args.searchTerm + '&rsz=' +
+          args.results + '&callback=' + args.callback;
 
-        $http.jsonp(host + params).then(function (data) { // promise success callback
-          deferred.resolve(data); // resolves Deferred object and calls doneCallback of '.then' method with 'data' arg
+        $http.jsonp(host + params).then(function (response) {
+          deferred.resolve(response);
+        }, function (error) {
+          console.error(error);
         });
 
-        return deferred.promise; // returns the Deferred’s Promise object
+        return deferred.promise;
       }
     };
   });
