@@ -1,7 +1,8 @@
 'use strict';
 
 angular.module('generatorMeanstackApp')
-  .controller('DataController', function ($scope, $http, $location, $anchorScroll, meanService, jsonFactory, mongoFactory, googleFactory) {
+  .controller('DataController', function ($scope, $http, $location, $anchorScroll,
+                                          meanService, jsonFactory, mongoFactory, googleFactory) {
 
     // Function within the AngularJS Controller returns a static array of strings.
     $scope.yeomanStuff = function () {
@@ -15,7 +16,7 @@ angular.module('generatorMeanstackApp')
     // AngularJS Service returns a static array of object literals to the controller.
     $scope.meanStuff = {};
     try {
-      $scope.meanStuff = meanService.getMeanStuff();
+      $scope.meanStuff = meanService.getMeanStuff().components;
     } catch (error) {
       console.error(error);
     }
@@ -24,7 +25,7 @@ angular.module('generatorMeanstackApp')
     $scope.otherStuff = {};
     jsonFactory.getOtherStuff()
       .then(function (response) {
-        $scope.otherStuff = response;
+        $scope.otherStuff = response.data.components;
       }, function (error) {
         console.error(error);
       });
@@ -34,18 +35,18 @@ angular.module('generatorMeanstackApp')
     // from MongoDB Database to the controller.
     $scope.mongoStuff = {};
     mongoFactory.getMongoStuff()
-      .then(function (response) {
-        $scope.mongoStuff = response;
+      .then(function (data) {
+        $scope.mongoStuff = data;
       }, function (error) {
         console.error(error);
       });
 
-    // AngularJS Factory returns results from
+    // AngularJS Factory returns response from
     // Google's RESTful Web Search API to the controller.
     $scope.googleStuff = {};
     googleFactory.getSearchResults()
       .then(function (response) {
-        $scope.googleStuff = response;
+        $scope.googleStuff = response.data.responseData.results;
       }, function (error) {
         console.error(error);
       });

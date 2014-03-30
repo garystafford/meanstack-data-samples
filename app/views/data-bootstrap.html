@@ -47,7 +47,7 @@
             literals to the controller.</p>
         </div>
         <ul class="nav nav-pills nav-stacked">
-          <li ng-repeat="stuff in meanStuff.components">
+          <li ng-repeat="stuff in meanStuff">
             <a href="{{stuff.url}}"
                target="_blank">{{stuff.component}}</a>
           </li>
@@ -71,7 +71,7 @@
             controller.</p>
         </div>
         <ul class="nav nav-pills nav-stacked">
-          <li ng-repeat="stuff in otherStuff.data.components">
+          <li ng-repeat="stuff in otherStuff">
             <a href="{{stuff.url}}"
                target="_blank">{{stuff.component}}</a>
           </li>
@@ -121,7 +121,7 @@
         </div>
         <ul class="list-group">
           <li class="list-group-item"
-              ng-repeat="stuff in googleStuff.data.responseData.results">
+              ng-repeat="stuff in googleStuff">
             <a href="{{unescapedUrl.url}}"
                target="_blank"><b>{{stuff.visibleUrl}}</b></a>
 

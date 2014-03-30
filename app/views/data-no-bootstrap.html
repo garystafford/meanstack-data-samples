@@ -16,7 +16,7 @@
     <p>AngularJS Service returns a static array of object
       literals to the controller.</p>
     <ul>
-      <li ng-repeat="stuff in meanStuff.components">
+      <li ng-repeat="stuff in meanStuff">
         <a href="{{stuff.url}}" target="_blank">{{stuff.component}}</a>
       </li>
     </ul>
@@ -27,7 +27,7 @@
     <p>AngularJS Factory returns the contents of JSON file to the
       controller.</p>
     <ul>
-      <li ng-repeat="stuff in otherStuff.data.components">
+      <li ng-repeat="stuff in otherStuff">
         <a href="{{stuff.url}}" target="_blank">{{stuff.component}}</a>
       </li>
     </ul>
@@ -49,7 +49,7 @@
     <p>AngularJS Factory returns top 8 'mean stack' search results from
       Google's RESTful Web Search API to the controller.</p>
     <ul>
-      <li ng-repeat="stuff in googleStuff.data.responseData.results">
+      <li ng-repeat="stuff in googleStuff">
         <a href="{{unescapedUrl.url}}"
            target="_blank">{{stuff.visibleUrl}}</a>
         <br/>
