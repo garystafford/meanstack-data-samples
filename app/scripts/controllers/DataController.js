@@ -16,7 +16,7 @@ angular.module('generatorMeanstackApp')
     // AngularJS Service returns a static array of object literals to the controller.
     $scope.meanStuff = {};
     try {
-      $scope.meanStuff = meanService.getMeanStuff().components;
+      $scope.meanStuff = meanService.getMeanStuff();
     } catch (error) {
       console.error(error);
     }

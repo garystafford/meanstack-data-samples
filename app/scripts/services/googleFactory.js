@@ -9,21 +9,19 @@ angular.module('generatorMeanstackApp')
   .factory('googleFactory', function ($q, $http) {
     return {
       getSearchResults: function () {
-        var deferred = $q.defer();
+        var deferred = $q.defer(),
+          host = 'https://ajax.googleapis.com/ajax/services/search/web',
+          args = {
+            'version': '1.0',
+            'searchTerm': 'mean%20stack',
+            'results': '8',
+            'callback': 'JSON_CALLBACK'
+          },
+          params = ('?v=' + args.version + '&q=' + args.searchTerm + '&rsz=' +
+            args.results + '&callback=' + args.callback),
+          httpPromise = $http.jsonp(host + params);
 
-        var host = 'https://ajax.googleapis.com/ajax/services/search/web';
-
-        // URL arguments: https://developers.google.com/web-search/docs/reference
-        var args = {};
-        args.version = '1.0';
-        args.searchTerm = 'mean%20stack';
-        args.results = '8';
-        args.callback = 'JSON_CALLBACK';
-
-        var params = '?v=' + args.version + '&q=' + args.searchTerm + '&rsz=' +
-          args.results + '&callback=' + args.callback;
-
-        $http.jsonp(host + params).then(function (response) {
+        httpPromise.then(function (response) {
           deferred.resolve(response);
         }, function (error) {
           console.error(error);
