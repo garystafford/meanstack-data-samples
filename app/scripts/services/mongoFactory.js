@@ -7,11 +7,11 @@ angular.module('generatorMeanstackApp')
         var deferred = $q.defer(),
           httpPromise = $http.get('/api/components');
 
-        httpPromise.success(function (data) {
-          deferred.resolve(data);
+        httpPromise.success(function (components) {
+          deferred.resolve(components);
         })
-          .error(function (data) {
-            console.log('Error: ' + data);
+          .error(function (error) {
+            console.error(error);
           });
 
         return deferred.promise;

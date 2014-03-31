@@ -35,8 +35,8 @@ angular.module('generatorMeanstackApp')
     // from MongoDB Database to the controller.
     $scope.mongoStuff = {};
     mongoFactory.getMongoStuff()
-      .then(function (data) {
-        $scope.mongoStuff = data;
+      .then(function (components) {
+        $scope.mongoStuff = components;
       }, function (error) {
         console.error(error);
       });
