@@ -1,7 +1,7 @@
 'use strict';
 
 (function() {
-  var app = angular.module('generatorMeanstackApp', ['ngResource']);
+  var app = angular.module('generatorMeanstackApp', ['ngResource', 'ngRoute']);
   app.config(function($routeProvider) {
     $routeProvider
       .when('/', {
