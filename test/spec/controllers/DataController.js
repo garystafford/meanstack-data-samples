@@ -10,6 +10,8 @@ describe('Controller: DataController', function($httpBackend) {
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function($controller, $rootScope, $httpBackend) {
+
+    // mock response to meanService $http.get call
     $httpBackend.when('GET', 'data/otherStuff.json').respond({
       "components": [{
         "component": "red",
@@ -24,8 +26,10 @@ describe('Controller: DataController', function($httpBackend) {
         "component": "orange",
         "url": "http://orange.com"
       }]
+
     });
 
+    // mock response to mongoFactory $http.get call
     $httpBackend.when('GET', '/api/components').respond(
       [{
         _id: "53226ca2b260b524e8ced833",
@@ -44,9 +48,10 @@ describe('Controller: DataController', function($httpBackend) {
 
     var googleURL = 'https://ajax.googleapis.com/ajax/services/search/web?v=1.0&q=mean%20stack&rsz=8&callback=JSON_CALLBACK';
 
+    // mock response to googleFactory $http.jsonp call
     $httpBackend.when('JSONP', googleURL).respond({
-      responseData: {
-        results: [{
+      "responseData": {
+        "results": [{
           GsearchResultClass: "GwebSearch",
           unescapedUrl: "http://www.foo.io/",
           url: "http://www.foo.io/",
@@ -81,11 +86,11 @@ describe('Controller: DataController', function($httpBackend) {
   });
 
   it('should attach a list of meanStuff to the scope', function() {
-    expect(scope.meanStuff.components.length).toBe(4);
+    expect(scope.meanStuff.length).toBe(4);
   });
 
   it('should attach a list of otherStuff to the scope', function() {
-    expect(scope.otherStuff.data.components.length).toBe(4);
+    expect(scope.otherStuff.length).toBe(4);
   });
 
   it('should attach a list of mongoStuff to the scope', function() {
@@ -93,6 +98,6 @@ describe('Controller: DataController', function($httpBackend) {
   });
 
   it('should attach a list of googleStuff to the scope', function() {
-    expect(scope.googleStuff.data.responseData.results.length).toBe(2);
+    expect(scope.googleStuff.length).toBe(2);
   });
 });

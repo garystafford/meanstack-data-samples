@@ -20,6 +20,6 @@ angular.module('generatorMeanstackApp')
           component: 'Node.js',
           url: 'http://nodejs.org'
         }
-      ])
+      ]);
     };
   });
