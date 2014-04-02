@@ -8,10 +8,14 @@ var Db = require('mongodb').Db,
 
 // Establish connection to db
 db.open(function (err, db) {
-// Crete the collection
+
+  // Crete the collection
   db.createCollection('components2', {strict: true}, function (err, collection) {
-    if (!err===err) console.error(err);
-    exit;
+    if (err) {
+      db.close();
+      console.error(err);
+      return false;
+    }
 
     // Insert documents to perform distinct against
     collection.insert({ "component": "mongod", "description": "core database process" });
