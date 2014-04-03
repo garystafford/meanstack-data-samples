@@ -20,14 +20,14 @@ Contains examples of retrieving data using various AngularJS methods:
 
 ##### Create and Populate MongoDB Test Database
 To create the sample database, collection, and documents, you can run the following
-JavaScript file, using node. Or, you can manually run the individual commands, below:
+JavaScript file, using node:
 
 ```
 node mongo-setup.js
 ```
-or,
+Or, you can manually run the individual command:
 ```
-start mondod # opens mongod in new shell
+mongod # starts core database process
 mongo # starts interactive MongoDB Shell
 use meanstack-test // creates database if it doesn't exist
 db.components.insert({ "component": "mongod", "description": "core database process" })
