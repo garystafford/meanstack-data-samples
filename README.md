@@ -19,10 +19,16 @@ Contains examples of retrieving data using various AngularJS methods:
 (i.e. `C:\Program Files (x86)\Google\Chrome\Application\chrome.exe`
 
 ##### Create and Populate MongoDB Test Database
+To create the sample database, collection, and documents, you can run the following
+JavaScript file, using node. Or, you can manually run the individual commands, below:
 
 ```
-start mondod
-mongo
+node mongo-setup.js
+```
+or,
+```
+start mondod # opens mongod in new shell
+mongo # starts interactive MongoDB Shell
 use meanstack-test // creates database if it doesn't exist
 db.components.insert({ "component": "mongod", "description": "core database process" })
 db.components.insert({ "component": "mongos", "description": "controller and query router for sharded clusters" })
