@@ -29,6 +29,7 @@ Or, you can manually run the individual command:
 ```
 mongod # starts core database process
 mongo # starts interactive MongoDB Shell
+
 use meanstack-test // creates database if it doesn't exist
 db.components.insert({ "component": "mongod", "description": "core database process" })
 db.components.insert({ "component": "mongos", "description": "controller and query router for sharded clusters" })
