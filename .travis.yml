@@ -8,4 +8,5 @@ services:
 before_script:
   - npm install -g grunt-cli
   - npm install -g bower
+  - bower install
   - node mongo-setup.js
