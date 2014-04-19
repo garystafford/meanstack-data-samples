@@ -1,12 +1,24 @@
 {
-  "name": "generator-meanstack",
-  "version": "0.1.0",
-  "private": true,
+  "name": "meanstack-data-samples",
+  "description": "Retrieving and Displaying Data with AngularJS and the MEAN Stack.",
+  "version": "0.2.0",
+  "private": false,
+  "author": "https://github.com/garystafford",
   "scripts": {
     "start": "node server"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/garystafford/meanstack-data-samples.git"
+  },
   "engines": {
-    "node": ">=0.8.0"
+    "node": "0.10.x",
+    "npm": "1.4.x"
+  },
+  "scripts": {
+    "start": "grunt server",
+    "test": "grunt test",
+    "postinstall": "bower install --config.interactive=false"
   },
   "dependencies": {
     "express": "~3.4.0",
