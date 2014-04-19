@@ -1,6 +1,7 @@
 {
-  "name": "generator-meanstack",
-  "version": "0.0.0",
+  "name": "meanstack-data-samples",
+  "description": "Retrieving and Displaying Data with AngularJS and the MEAN Stack.",
+  "version": "0.2.0",
   "dependencies": {
     "angular": "~1.2.15",
     "angular-cookies": "~1.2.15",

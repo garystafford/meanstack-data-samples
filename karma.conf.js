@@ -1,58 +1,64 @@
+'use strict';
+
+/**
+ * Module dependencies.
+ */
+//var utilities = require('./config/utilities');
+
+// Grabbing module files using the walk function
+//var modulesJSFiles = utilities.walk('./public/modules', /(.*)\.js$/);
+
 // Karma configuration
+module.exports = function(config) {
+  config.set({
+    // Frameworks to use
+    frameworks: ['jasmine'],
 
-// base path, that will be used to resolve files and exclude
-basePath = '';
+    // List of files / patterns to load in the browser
+    files: [
+      'app/bower_components/angular/angular.js',
+      'app/bower_components/angular-resource/angular-resource.js',
+      'app/bower_components/angular-mocks/angular-mocks.js',
+      'app/bower_components/angular-route/angular-route.js',
+      'app/scripts/*.js',
+      'app/scripts/**/*.js',
+      'test/mock/**/*.js',
+      'test/spec/**/*.js'
+    ],
 
-// list of files / patterns to load in the browser
-files = [
-  JASMINE,
-  JASMINE_ADAPTER,
-  'app/bower_components/angular/angular.js',
-  'app/bower_components/angular-resource/angular-resource.js',
-  'app/bower_components/angular-mocks/angular-mocks.js',
-  'app/bower_components/angular-route/angular-route.js',
-  'app/scripts/*.js',
-  'app/scripts/**/*.js',
-  'test/mock/**/*.js',
-  'test/spec/**/*.js'
-];
+    // Test results reporter to use
+    // Possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
+    //reporters: ['progress'],
+    reporters: ['progress'],
 
-// list of files to exclude
-exclude = [];
+    // Web server port
+    port: 9876,
 
-// test results reporter to use
-// possible values: dots || progress || growl
-reporters = ['progress'];
+    // Enable / disable colors in the output (reporters and logs)
+    colors: true,
 
-// web server port
-port = 8090;
+    // Level of logging
+    // Possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
+    logLevel: config.LOG_INFO,
 
-// cli runner port
-runnerPort = 9100;
+    // Enable / disable watching file and executing tests whenever any file changes
+    autoWatch: true,
 
-// enable / disable colors in the output (reporters and logs)
-colors = true;
+    // Start these browsers, currently available:
+    // - Chrome
+    // - ChromeCanary
+    // - Firefox
+    // - Opera
+    // - Safari (only Mac)
+    // - PhantomJS
+    // - IE (only Windows)
+    browsers: ['PhantomJS'],
 
-// level of logging
-// possible values: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG
-logLevel = LOG_INFO;
+    // If browser does not capture in given timeout [ms], kill it
+    captureTimeout: 60000,
 
-// enable / disable watching file and executing tests whenever any file changes
-autoWatch = false;
-
-// Start these browsers, currently available:
-// - Chrome
-// - ChromeCanary
-// - Firefox
-// - Opera
-// - Safari (only Mac)
-// - PhantomJS
-// - IE (only Windows)
-browsers = ['Chrome'];
-
-// If browser does not capture in given timeout [ms], kill it
-captureTimeout = 10000;
-
-// Continuous Integration mode
-// if true, it capture browsers, run tests and exit
-singleRun = false;
+    // Continuous Integration mode
+    // If true, it capture browsers, run tests and exit
+    singleRun: true
+  });
+};
