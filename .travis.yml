@@ -5,3 +5,5 @@ env:
   - NODE_ENV=travis
 services:
   - mongodb
+before_script:
+  - npm install -g grunt-cli
