@@ -17,8 +17,7 @@
   },
   "scripts": {
     "start": "grunt server",
-    "test": "grunt test",
-    "postinstall": "bower install --config.interactive=false"
+    "test": "grunt test"
   },
   "dependencies": {
     "express": "~3.4.0",
