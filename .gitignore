@@ -7,3 +7,5 @@ public/lib
 .idea
 #!/app/bower_components/bootstrap/dist
 *~
+.tmp/
+*.log
