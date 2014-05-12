@@ -1,20 +1,18 @@
 <div>
   <div>
     <h2>Retrieving Data with AngularJS and MEAN Stack</h2>
-
     <h4>Exploring methods of retrieving data with AngularJS and the MEAN
-      Stack.</h4>
+    Stack.</h4>
     <hr/>
   </div>
-
   <div>
     <p>Function within the AngularJS Controller returns a static
-      array of strings.</p>
+    array of strings.</p>
     <ul>
       <li ng-repeat="stuff in yeomanStuff()">{{stuff}}</li>
     </ul>
     <p>AngularJS Service returns a static array of object
-      literals to the controller.</p>
+    literals to the controller.</p>
     <ul>
       <li ng-repeat="stuff in meanStuff">
         <a href="{{stuff.url}}" target="_blank">{{stuff.component}}</a>
@@ -22,21 +20,19 @@
     </ul>
     <hr/>
   </div>
-
   <div>
-    <p>AngularJS Factory returns the contents of JSON file to the
-      controller.</p>
+    <p>AngularJS Factory creates a resource object to return the contents of JSON
+    file to the controller.</p>
     <ul>
-      <li ng-repeat="stuff in otherStuff">
+      <li ng-repeat="stuff in otherStuffAlt">
         <a href="{{stuff.url}}" target="_blank">{{stuff.component}}</a>
       </li>
     </ul>
     <hr/>
   </div>
-
   <div>
     <p>AngularJS Factory returns a collection of documents
-      from MongoDB Database to the controller.</p>
+    from MongoDB Database to the controller.</p>
     <ul>
       <li ng-repeat="stuff in mongoStuff">
         <b>{{stuff.component}}</b>: {{stuff.description}}
@@ -44,14 +40,13 @@
     </ul>
     <hr/>
   </div>
-
   <div>
     <p>AngularJS Factory returns top 8 'mean stack' search results from
-      Google's RESTful Web Search API to the controller.</p>
+    Google's RESTful Web Search API to the controller.</p>
     <ul>
       <li ng-repeat="stuff in googleStuff">
         <a href="{{unescapedUrl.url}}"
-           target="_blank">{{stuff.visibleUrl}}</a>
+        target="_blank">{{stuff.visibleUrl}}</a>
         <br/>
         {{stuff.titleNoFormatting}}
       </li>
@@ -63,12 +58,12 @@
   <div id="footer">
     </br>
     <button class="btn btn-primary btn-sm"
-            ng-click="changeView('data-bootstrap')">
-      With Bootstrap
+    ng-click="changeView('data-bootstrap')">
+    With Bootstrap
     </button>
     <a class="btn-link pull-right" ng-click="scrollTo('top')">
-      <span class=" glyphicon glyphicon-arrow-down"></span>
-      Top of Page</a>
+    <span class=" glyphicon glyphicon-arrow-down"></span>
+    Top of Page</a>
     <br/>
     <br/>
   </div>

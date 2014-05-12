@@ -9,7 +9,7 @@ Explore various methods of retrieving and displaying data using AngularJS and th
 Contains examples of retrieving data using various AngularJS methods:
 * Function within AngularJS controller returns array of strings.
 * AngularJS Service returns an array of simple object literals to the controller.
-* AngularJS Factory returns the contents of JSON file to the controller.
+* AngularJS Factory creates a resource object to return the contents of JSON file to the controller (Modified 5/2014).
 * AngularJS Factory returns a collection of documents from MongoDB Database to the controller.
 * AngularJS Factory returns results from Google's RESTful Web Search API to the controller.
 
@@ -62,6 +62,7 @@ grunt server
 * Karma unit tests included for controller and services.
 * Karma's default port `8080` to `8090` in `karma.conf.js` and `karma-e2e.conf.js` files. It conflicted with my installation of Apache and every other application that wants to use port `8080` by default.
 * The `grunt` command now runs without error. In the original project, `jshint` had a strict violation with `validthis`.
+* Added support for Travis-CI. Project now building on [Travis-CI](https://travis-ci.org/garystafford/meanstack-data-samples) for each commit to GitHub (Added 4/2014).
 
 Preview of project on Chrome for Android:
 
