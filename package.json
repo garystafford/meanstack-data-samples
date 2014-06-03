@@ -46,6 +46,7 @@
     "grunt-ngmin": "~0.0.3",
     "grunt-open": "~0.2.3",
     "grunt-rev": "~0.1.0",
+    "grunt-shell-spawn": "~0.3.0",
     "grunt-usemin": "~2.1.1",
     "karma": "~0.12.9",
     "karma-jasmine": "~0.2.1",

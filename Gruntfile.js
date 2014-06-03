@@ -301,6 +301,15 @@ module.exports = function (grunt) {
           packageJson: null //find package.json automatically
         }
       }
+    },
+    shell: {
+      mongo: {
+        command: 'mongod >/dev/null 2>/dev/null || ' +
+          'echo mongod process is already running...',
+        options: {
+          async: true
+        }
+      }
     }
   });
 
@@ -310,6 +319,7 @@ module.exports = function (grunt) {
     }
 
     grunt.task.run([
+      'shell:mongo',
       'clean:server',
       'concurrent:server',
       'express:livereload',
