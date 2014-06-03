@@ -8,7 +8,8 @@ Project created for 2-part blog post series: [Retrieving and Displaying Data wit
 Contains examples of retrieving data using various AngularJS methods:
 * Function within AngularJS controller returns array of strings.
 * AngularJS Service returns an array of simple object literals to the controller.
-* AngularJS Factory creates a resource object to return the contents of JSON file to the controller (Modified 5/2014).
+* AngularJS Factory returns the contents of JSON file to the controller.
+* AngularJS Factory returns the contents of JSON file to the controller using a resource object (new – not discussed in post).
 * AngularJS Factory returns a collection of documents from MongoDB Database to the controller.
 * AngularJS Factory returns results from Google's RESTful Web Search API to the controller.
 
