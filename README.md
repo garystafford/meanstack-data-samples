@@ -3,14 +3,18 @@
 
 ## Retrieving and Displaying Data with AngularJS and the MEAN Stack
 ### GitHub Branches  
-express4  
-New branch for project conversion to expressjs 4.x (at time of conversion 4.4.1)
+**express4**  
+New branch for project conversion to ExpressJS 4.x created 6/2014.
+* Converted project to ExpressJS 4.4.1. Good instructions on [scotch.io](http://scotch.io/bar-talk/expressjs-4-0-new-features-and-upgrading-from-3-0).
+* Updated all Node.js dependencies in package.json.
+* Added project to [david-dm.org](https://david-dm.org/garystafford/meanstack-data-samples) to monitor Node.js dependencies.
 
-master  
-Project created for 2-part blog post series: [Retrieving and Displaying Data with AngularJS and the MEAN Stack](http://wp.me/p1RD28-16F). Explore various methods of retrieving and displaying data using AngularJS and the MEAN Stack. Corresponding GitHub project is based on William Lepinski’s [generator-meanstack](https://github.com/wlepinski/generator-meanstack), with Mongoose and Twitter Bootstrap added.
+**master**  
+Project created for 2-part blog post series: [Retrieving and Displaying Data with AngularJS and the MEAN Stack](http://wp.me/p1RD28-16F).
+* Explores various methods of retrieving and displaying data using AngularJS and the MEAN Stack.
+* Originally, project based on William Lepinski’s [generator-meanstack](https://github.com/wlepinski/generator-meanstack) repo, with Mongoose and Twitter Bootstrap added.
 
 ### Overview
-
 Contains examples of retrieving data using various AngularJS methods:
 * Function within AngularJS controller returns array of strings.
 * AngularJS Service returns an array of simple object literals to the controller.
@@ -19,14 +23,14 @@ Contains examples of retrieving data using various AngularJS methods:
 * AngularJS Factory returns a collection of documents from MongoDB Database to the controller.
 * AngularJS Factory returns results from Google's RESTful Web Search API to the controller.
 
-### Project Instructions
+### Instructions
 * Review the [generator-meanstack](https://github.com/wlepinski/generator-meanstack) `README.md`
 * Project requires MongoDB, Node, Express, and yo
 * Set the `NODE_ENV` environment variable to `test`
-* Set the `CHROME_BIN` environment variable for Karma  
-(i.e. `C:\Program Files (x86)\Google\Chrome\Application\chrome.exe`
+* If using Chrome for Karma test, set the `CHROME_BIN` environment variable for Karma  
+  (i.e. `C:\Program Files (x86)\Google\Chrome\Application\chrome.exe`
 
-##### Create and Populate MongoDB Test Database
+**Create and Populate MongoDB Test Database**  
 To create the sample database, collection, and documents, you can run the following JavaScript file, using node:
 
 ```
@@ -48,8 +52,7 @@ show collections // verifies collection was created
 db.components.find() // verifies documents were created
 ```
 
-##### Install and Configure the Project
-
+**Installation and Configuration**  
 ```
 npm install -g generator-meanstack
 git clone https://github.com/garystafford/meanstack-data-samples.git
@@ -59,7 +62,7 @@ grunt
 grunt server
 ```
 
-### Notes About Project
+### Notes
 * Original project based on yeoman's [generator-angular](http://yeoman.io/). All generator commands work.
 * Link to main AngularJS `test-bootstrap` view: [http://localhost:3000/#](http://localhost:3000/#).
 * HTTP GET call to MongoDB data: [http://localhost:3000/api/components](http://localhost:3000/api/components).
@@ -69,5 +72,6 @@ grunt server
 * The `grunt` command now runs without error. In the original project, `jshint` had a strict violation with `validthis`.
 * Added support for Travis-CI. Project now building on [Travis-CI](https://travis-ci.org/garystafford/meanstack-data-samples) for each commit to GitHub (Added 4/2014).
 
-Preview of project on Chrome for Android:  
+### Preview
+Chrome for Android:  
 ![Chrome on Android ](https://github.com/garystafford/meanstack-data-samples/blob/master/public/images/AndroidMobileView.png?raw=true)
