@@ -2,9 +2,14 @@
 <a href='https://david-dm.org/garystafford/meanstack-data-samples'><img src='https://david-dm.org/garystafford/meanstack-data-samples.png'></a>
 
 ## Retrieving and Displaying Data with AngularJS and the MEAN Stack
-### Overview
+### GitHub Branches  
+express4  
+New branch for project conversion to expressjs 4.x (at time of conversion 4.4.1)
 
+master  
 Project created for 2-part blog post series: [Retrieving and Displaying Data with AngularJS and the MEAN Stack](http://wp.me/p1RD28-16F). Explore various methods of retrieving and displaying data using AngularJS and the MEAN Stack. Corresponding GitHub project is based on William Lepinski’s [generator-meanstack](https://github.com/wlepinski/generator-meanstack), with Mongoose and Twitter Bootstrap added.
+
+### Overview
 
 Contains examples of retrieving data using various AngularJS methods:
 * Function within AngularJS controller returns array of strings.
@@ -22,8 +27,7 @@ Contains examples of retrieving data using various AngularJS methods:
 (i.e. `C:\Program Files (x86)\Google\Chrome\Application\chrome.exe`
 
 ##### Create and Populate MongoDB Test Database
-To create the sample database, collection, and documents, you can run the following
-JavaScript file, using node:
+To create the sample database, collection, and documents, you can run the following JavaScript file, using node:
 
 ```
 node mongo-setup.js
@@ -65,6 +69,5 @@ grunt server
 * The `grunt` command now runs without error. In the original project, `jshint` had a strict violation with `validthis`.
 * Added support for Travis-CI. Project now building on [Travis-CI](https://travis-ci.org/garystafford/meanstack-data-samples) for each commit to GitHub (Added 4/2014).
 
-Preview of project on Chrome for Android:
-
+Preview of project on Chrome for Android:  
 ![Chrome on Android ](https://github.com/garystafford/meanstack-data-samples/blob/master/public/images/AndroidMobileView.png?raw=true)
