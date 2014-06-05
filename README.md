@@ -2,17 +2,16 @@
 <a href='https://david-dm.org/garystafford/meanstack-data-samples'><img src='https://david-dm.org/garystafford/meanstack-data-samples.png'></a>
 
 ## Retrieving and Displaying Data with AngularJS and the MEAN Stack
+Project created for 2-part blog post series: [Retrieving and Displaying Data with AngularJS and the MEAN Stack](http://wp.me/p1RD28-16F). Explores various methods of retrieving and displaying data using AngularJS and the MEAN Stack. Originally based on William Lepinski’s [generator-meanstack](https://github.com/wlepinski/generator-meanstack) project with Mongoose and Twitter Bootstrap added.
 ### GitHub Branches  
 **express4**  
-New branch for project conversion to ExpressJS 4.x created 6/2014.
+New branch for project conversion to ExpressJS 4.x created June, 2014.
 * Converted project to ExpressJS 4.4.1. Good instructions on [scotch.io](http://scotch.io/bar-talk/expressjs-4-0-new-features-and-upgrading-from-3-0).
 * Updated all Node.js dependencies in package.json.
 * Added project to [david-dm.org](https://david-dm.org/garystafford/meanstack-data-samples) to monitor Node.js dependencies.
 
 **master**  
-Project created for 2-part blog post series: [Retrieving and Displaying Data with AngularJS and the MEAN Stack](http://wp.me/p1RD28-16F).
-* Explores various methods of retrieving and displaying data using AngularJS and the MEAN Stack.
-* Originally, project based on William Lepinski’s [generator-meanstack](https://github.com/wlepinski/generator-meanstack) repo, with Mongoose and Twitter Bootstrap added.
+Original code for blog post.
 
 ### Overview
 Contains examples of retrieving data using various AngularJS methods:
@@ -70,7 +69,7 @@ grunt server
 * Karma unit tests included for controller and services.
 * Karma's default port `8080` to `8090` in `karma.conf.js` and `karma-e2e.conf.js` files. It conflicted with my installation of Apache and every other application that wants to use port `8080` by default.
 * The `grunt` command now runs without error. In the original project, `jshint` had a strict violation with `validthis`.
-* Added support for Travis-CI. Project now building on [Travis-CI](https://travis-ci.org/garystafford/meanstack-data-samples) for each commit to GitHub (Added 4/2014).
+* Added support for Travis-CI. Project now building on [Travis-CI](https://travis-ci.org/garystafford/meanstack-data-samples) for each commit to GitHub (Added April, 2014).
 
 ### Preview
 Chrome for Android:  
