@@ -1,18 +1,18 @@
 'use strict';
 
-describe('Service: mongoFactory', function() {
+describe('Service: mongoFactory', function () {
 
-  // load the service's module
-  beforeEach(module('generatorMeanstackApp'));
+    // load the service's module
+    beforeEach(module('generatorMeanstackApp'));
 
-  // instantiate service
-  var mongoFactory;
-  beforeEach(inject(function(_mongoFactory_) {
-    mongoFactory = _mongoFactory_;
-  }));
+    // instantiate service
+    var mongoFactory;
+    beforeEach(inject(function (_mongoFactory_) {
+        mongoFactory = _mongoFactory_;
+    }));
 
-  it('should do something', function() {
-    expect( !! mongoFactory).toBe(true);
-  });
+    it('should do something', function () {
+        expect(!!mongoFactory).toBe(true);
+    });
 
 });

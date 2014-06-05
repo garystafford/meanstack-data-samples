@@ -5,19 +5,19 @@ var Component = require('./models/component');
 
 module.exports = function (app) {
 
-  // get all components
-  app.get('/api/components', function (req, res) {
+    // get all components
+    app.route('/api/components')
+        .get(function (req, res) {
+            // use mongoose to get all components in the database
+            Component.find(function (err, components) {
 
-    // use mongoose to get all components in the database
-    Component.find(function (err, components) {
+                // if there is an error retrieving, send the error.
+                // nothing after res.send(err) will execute.
+                if (err)
+                    res.send(err);
 
-      // if there is an error retrieving, send the error.
-      // nothing after res.send(err) will execute.
-      if (err)
-        res.send(err);
-
-      // return all components in JSON format
-      res.json(components);
-    });
-  });
+                // return all components in JSON format
+                res.json(components);
+            });
+        });
 };

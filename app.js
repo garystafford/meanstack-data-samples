@@ -1,9 +1,9 @@
 // set up =====================================
-var express = require('express');
-var routes = require('./routes');
-var path = require('path');
-var app = express();
-var mongoose = require('mongoose');
+var express          = require('express');
+var path             = require('path');
+var app              = express();
+var routes           = require('./routes');
+var mongoose         = require('mongoose');
 
 // configuration ==============================
 app.directory = __dirname;

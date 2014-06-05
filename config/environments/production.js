@@ -1,21 +1,28 @@
-var express = require('express'),
-    path = require('path');
+// set up =====================================
+var express          = require('express');
+var bodyParser       = require('body-parser');
+var favicon          = require('static-favicon');
+var logger           = require('morgan');
+var cookieParser     = require('cookie-parser');
+var methodOverride   = require('method-override');
+var session          = require('express-session');
+var path             = require('path');
+var env              = process.env.NODE_ENV || 'development';
 
-module.exports = function(app) {
-    app.configure('production', function() {
+module.exports = function (app) {
+    if ('production' == env) {
         app.set('db', 'mongodb://localhost/meanstack-prod');
         app.set('name', 'A generator-meanstack sample application - Production');
         app.set('port', process.env.PORT || 9000);
         app.set('views', path.join(app.directory, '/dist'));
         app.engine('html', require('ejs').renderFile);
         app.set('view engine', 'html');
-        app.use(express.favicon());
-        app.use(express.logger('dev'));
-        app.use(express.bodyParser());
-        app.use(express.methodOverride());
-        app.use(express.cookieParser('your secret here'));
-        app.use(express.session());
-        app.use(app.router);
-        app.use(express.static(path.join(app.directory, 'dist')));
-    });
+        app.use(favicon());
+        app.use(logger('dev'));
+        app.use(bodyParser());
+        app.use(methodOverride());
+        app.use(cookieParser('your secret here'));
+        app.use(session());
+        app.use(static(path.join(app.directory, 'dist')));
+    }
 };

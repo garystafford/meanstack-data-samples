@@ -1,4 +1,5 @@
 <a href='https://travis-ci.org/garystafford/meanstack-data-samples'><img src='https://travis-ci.org/garystafford/meanstack-data-samples.svg?branch=master'></a>
+<a href='https://david-dm.org/garystafford/meanstack-data-samples'><img src='https://david-dm.org/garystafford/meanstack-data-samples.png'></a>
 
 ## Retrieving and Displaying Data with AngularJS and the MEAN Stack
 ### Overview

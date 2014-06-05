@@ -1,11 +1,10 @@
-var Db = require('mongodb').Db,
-  Server = require('mongodb').Server,
-  database = 'meanstack-test',
-  db = new Db(database, new Server('localhost', 27017), {
-    w: 1
-  }),
-  newCollection = 'components',
-  collection = {};
+// set up =====================================
+var Db               = require('mongodb').Db;
+var Server           = require('mongodb').Server;
+var database         = 'meanstack-test';
+var db               = new Db(database, new Server('localhost', 27017), {w: 1});
+var newCollection    = 'components';
+var collection       = {};
 
 db.open(function (err, db) {
   if (err) {
