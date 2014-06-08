@@ -12,6 +12,7 @@ var env              = process.env.NODE_ENV || 'development';
 
 module.exports = function (app) {
     if ('development' == env) {
+        console.log('env = development');
         app.use(function staticsPlaceholder(req, res, next) {
             return next();
         });

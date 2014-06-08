@@ -26,7 +26,9 @@ Contains examples of retrieving data using various AngularJS methods:
 * Review the [generator-meanstack](https://github.com/wlepinski/generator-meanstack) `README.md`
 * Project requires MongoDB, Node, Express, and yo
 * Set the `NODE_ENV` environment variable to `test`
-* If using Chrome for Karma test, set the `CHROME_BIN` environment variable for Karma  
+* Set the `PORT` environment variable to the preferred startup port for node (i.e. 3000).
+* If no `PORT` environment variable is set, application defaults to 3000.
+* If using Chrome for Karma test, set the `CHROME_BIN` environment variable for Karma
   (i.e. `C:\Program Files (x86)\Google\Chrome\Application\chrome.exe`
 
 **Create and Populate MongoDB Test Database**  

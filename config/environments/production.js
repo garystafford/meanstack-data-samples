@@ -11,9 +11,10 @@ var env              = process.env.NODE_ENV || 'development';
 
 module.exports = function (app) {
     if ('production' == env) {
+        console.log('env = production');
         app.set('db', 'mongodb://localhost/meanstack-prod');
         app.set('name', 'A generator-meanstack sample application - Production');
-        app.set('port', process.env.PORT || 9000);
+        app.set('port', process.env.PORT || 3000);
         app.set('views', path.join(app.directory, '/dist'));
         app.engine('html', require('ejs').renderFile);
         app.set('view engine', 'html');
