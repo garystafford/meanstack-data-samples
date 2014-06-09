@@ -10,6 +10,13 @@
 
 // Karma configuration
 module.exports = function (config) {
+    // Determines Karma's browser choice based on environment
+    var testBrowser = 'Chrome,Internet Explorer'; // Default browser
+    if (process.env.NODE_ENV  === 'travis') {
+        testBrowser = 'PhantomJS'; // Must use for headless CI (Travis-CI)
+    }
+    console.log("Karma browser: " + testBrowser);
+
     config.set({
         // Frameworks to use
         frameworks: ['jasmine'],
@@ -28,7 +35,6 @@ module.exports = function (config) {
 
         // Test results reporter to use
         // Possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
-        //reporters: ['progress'],
         reporters: ['progress'],
 
         // Web server port
@@ -52,7 +58,7 @@ module.exports = function (config) {
         // - Safari (only Mac)
         // - PhantomJS
         // - IE (only Windows)
-        browsers: ['Chrome'],
+        browsers: [testBrowser],
 
         // If browser does not capture in given timeout [ms], kill it
         captureTimeout: 30000,
