@@ -18,7 +18,7 @@ Contains examples of retrieving data using various AngularJS methods:
 * Function within AngularJS controller returns array of strings.
 * AngularJS Service returns an array of simple object literals to the controller.
 * AngularJS Factory returns the contents of JSON file to the controller.
-* AngularJS Factory returns the contents of JSON file to the controller using a resource object (new – not discussed in post).
+* AngularJS Factory returns the contents of JSON file to the controller using a resource object (not discussed in post).
 * AngularJS Factory returns a collection of documents from MongoDB Database to the controller.
 * AngularJS Factory returns results from Google's RESTful Web Search API to the controller.
 
@@ -55,10 +55,12 @@ db.components.find() // verifies documents were created
 
 **Installation and Configuration**  
 ```
-npm install -g generator-meanstack
 git clone https://github.com/garystafford/meanstack-data-samples.git
 cd meanstack-data-samples
+npm install -g generator-meanstack
+yo meanstack
 npm install
+bower install
 grunt
 grunt server
 ```
