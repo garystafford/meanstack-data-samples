@@ -22,7 +22,7 @@ module.exports = function (app) {
         app.set('views', path.join(app.directory, '/app'));
         app.engine('html', require('ejs').renderFile);
         app.set('view engine', 'html');
-        app.use(favicon('favicon.ico'));
+        app.use(favicon('./app/favicon.ico'));
         app.use(logger('dev'));
         app.use(bodyParser());
         app.use(methodOverride());
