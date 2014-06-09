@@ -43,12 +43,18 @@ mongod # starts core database process
 mongo # starts interactive MongoDB Shell
 
 use meanstack-test // creates database if it doesn't exist
-db.components.insert({ "component": "mongod", "description": "core database process" })
-db.components.insert({ "component": "mongos", "description": "controller and query router for sharded clusters" })
-db.components.insert({ "component": "mongo",  "description": "interactive MongoDB Shell" })
-db.components.insert({ "component": "mongodump",  "description": "utility for creating binary export of database contents" })
-db.components.insert({ "component": "mongorestore",  "description": "writes data from a binary database dump to a MongoDB instance" })
-db.components.insert({ "component": "mongooplog",  "description": "polls operations from the replication oplog" })
+db.components.insert({ "component": "mongod",
+    "description": "core database process" })
+db.components.insert({ "component": "mongos",
+    "description": "controller and query router for sharded clusters" })
+db.components.insert({ "component": "mongo",
+    "description": "interactive MongoDB Shell" })
+db.components.insert({ "component": "mongodump",
+    "description": "utility for creating binary export of database contents" })
+db.components.insert({ "component": "mongorestore",
+    "description": "writes data from a binary database dump to a MongoDB instance" })
+db.components.insert({ "component": "mongooplog",
+    "description": "polls operations from the replication oplog" })
 show collections // verifies collection was created
 db.components.find() // verifies documents were created
 ```
