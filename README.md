@@ -25,11 +25,12 @@ Contains examples of retrieving data using various AngularJS methods:
 ### Instructions
 * Review the [generator-meanstack](https://github.com/wlepinski/generator-meanstack) `README.md`
 * Project requires MongoDB, Node, Express, and yo
-* Set the `NODE_ENV` environment variable to `test`
+* Set the `NODE_ENV` environment variable to `test`.
+* If no `NODE_ENV` environment variable is set, application defaults to 'development'.
 * Set the `PORT` environment variable to the preferred startup port for node (i.e. 3000).
 * If no `PORT` environment variable is set, application defaults to 3000.
 * If using Chrome for Karma test, set the `CHROME_BIN` environment variable for Karma
-  (i.e. `C:\Program Files (x86)\Google\Chrome\Application\chrome.exe`
+  (i.e. `C:\Program Files (x86)\Google\Chrome\Application\chrome.exe`).
 
 **Create and Populate MongoDB Test Database**  
 To create the sample database, collection, and documents, you can run the following JavaScript file, using node:
@@ -70,8 +71,7 @@ grunt server
 * HTTP GET call to MongoDB data: [http://localhost:3000/api/components](http://localhost:3000/api/components).
 * Deferred and Promises used to perform actions asynchronously: [$http](http://docs.angularjs.org/api/ng/service/$http)
 * Karma unit tests included for controller and services.
-* Karma's default port `8080` to `8090` in `karma.conf.js` and `karma-e2e.conf.js` files. It conflicted with my installation of Apache and every other application that wants to use port `8080` by default.
-* The `grunt` command now runs without error. In the original project, `jshint` had a strict violation with `validthis`.
+* Karma's default port `8080` to `8090` in `karma.conf.js` Karma configuration file. Port 8080 conflicted with my installation of Apache and every other application that wants to use port `8080` by default.
 * Added support for Travis-CI. Project now building on [Travis-CI](https://travis-ci.org/garystafford/meanstack-data-samples) for each commit to GitHub (Added April, 2014).
 
 ### Preview
