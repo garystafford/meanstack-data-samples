@@ -61,7 +61,7 @@ git clone https://github.com/garystafford/meanstack-data-samples.git
 cd meanstack-data-samples
 npm install
 bower install
-grunt
+grunt test
 grunt server
 ```
 
