@@ -55,10 +55,9 @@ db.components.find() // verifies documents were created
 
 **Installation and Configuration**  
 ```
+npm install -g generator-meanstack
 git clone https://github.com/garystafford/meanstack-data-samples.git
 cd meanstack-data-samples
-npm install -g generator-meanstack
-yo meanstack
 npm install
 bower install
 grunt
