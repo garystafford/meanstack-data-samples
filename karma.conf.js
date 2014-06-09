@@ -11,7 +11,7 @@
 // Karma configuration
 module.exports = function (config) {
     // Determines Karma's browser choice based on environment
-    var testBrowser = 'Chrome,Internet Explorer'; // Default browser
+    var testBrowser = 'Chrome'; // Default browser
     if (process.env.NODE_ENV  === 'travis') {
         testBrowser = 'PhantomJS'; // Must use for headless CI (Travis-CI)
     }
