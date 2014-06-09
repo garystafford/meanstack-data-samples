@@ -1,6 +1,6 @@
 <a href='https://travis-ci.org/garystafford/meanstack-data-samples'><img src='https://travis-ci.org/garystafford/meanstack-data-samples.svg?branch=express4'></a>
 <a href='https://david-dm.org/garystafford/meanstack-data-samples'><img src='https://david-dm.org/garystafford/meanstack-data-samples.png'></a>
-
+<a href='https://david-dm.org/garystafford/meanstack-data-samples#info=devDependencies'><img src='https://david-dm.org/garystafford/meanstack-data-samples/dev-status.png'></a>
 ## Retrieving and Displaying Data with AngularJS and the MEAN Stack
 Project created for 2-part blog post series: [Retrieving and Displaying Data with AngularJS and the MEAN Stack](http://wp.me/p1RD28-16F). Explores various methods of retrieving and displaying data using AngularJS and the MEAN Stack. Originally based on William Lepinski’s [generator-meanstack](https://github.com/wlepinski/generator-meanstack) project with Mongoose and Twitter Bootstrap added.
 ### GitHub Branches  
