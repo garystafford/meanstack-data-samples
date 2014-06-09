@@ -11,8 +11,8 @@
 // Karma configuration
 module.exports = function (config) {
     // Determines Karma's browser choice based on environment
-    var testBrowser = 'Chrome'; // Default browser
-    if (process.env.NODE_ENV  === 'travis') {
+    var testBrowser = 'PhantomJS'; // Default browser
+    if (process.env.NODE_ENV === 'travis') {
         testBrowser = 'PhantomJS'; // Must use for headless CI (Travis-CI)
     }
     console.log("Karma browser: " + testBrowser);
@@ -51,13 +51,8 @@ module.exports = function (config) {
         autoWatch: true,
 
         // Start these browsers, currently available:
-        // - Chrome
-        // - ChromeCanary
-        // - Firefox
-        // - Opera
-        // - Safari (only Mac)
-        // - PhantomJS
-        // - IE (only Windows)
+        // Chrome, ChromeCanary, Firefox, Opera,
+        // Safari (only Mac), PhantomJS, IE (only Windows)
         browsers: [testBrowser],
 
         // If browser does not capture in given timeout [ms], kill it
