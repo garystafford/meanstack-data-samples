@@ -24,7 +24,7 @@ Contains examples of retrieving data using various AngularJS methods:
 
 ### Instructions
 * Review the [generator-meanstack](https://github.com/wlepinski/generator-meanstack) `README.md`
-* Project requires MongoDB, Node, Express, and yo
+* Project requires MongoDB, Node, Express, and Yeoman.
 * Set the `NODE_ENV` environment variable to `test`.
 * If no `NODE_ENV` environment variable is set, application defaults to 'development'.
 * Set the `PORT` environment variable to the preferred startup port for node (i.e. 3000).
@@ -34,7 +34,6 @@ Contains examples of retrieving data using various AngularJS methods:
 
 **Create and Populate MongoDB Test Database**  
 To create the sample database, collection, and documents, you can run the following JavaScript file, using node:
-
 ```
 node mongo-setup.js
 ```
