@@ -82,7 +82,7 @@ angular.module('generatorMeanstackApp')
         // source: http://stackoverflow.com/a/13407227/580268
         $rootScope.$on('$routeChangeSuccess', function (event, current) {
             if (current.$$route != undefined) { // fix for Chrome
-                $rootScope.title = current.$$route.title || "Bad Route";
+                $rootScope.title = current.$$route.title; // || "Bad Route"
             }
         });
     });

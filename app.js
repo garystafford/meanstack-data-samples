@@ -2,7 +2,6 @@
 var express          = require('express');
 var path             = require('path');
 var app              = express();
-var routes           = require('./routes');
 var mongoose         = require('mongoose');
 
 // configuration ==============================
