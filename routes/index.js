@@ -1,6 +1,6 @@
 module.exports = function (app) {
     app.route('/')
-        .get(function (req, res, next) {
+        .get(function (req, res) {
             res.render('index');
         });
 };

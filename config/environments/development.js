@@ -12,12 +12,11 @@ var env              = process.env.NODE_ENV || 'development';
 
 module.exports = function (app) {
     if ('development' == env) {
-        console.log('env = development');
+        console.log('environment = development');
         app.use(function staticsPlaceholder(req, res, next) {
             return next();
         });
         app.set('db', 'mongodb://localhost/meanstack-dev');
-        app.set('name', 'A generator-meanstack sample application - Development');
         app.set('port', process.env.PORT || 9000);
         app.set('views', path.join(app.directory, '/app'));
         app.engine('html', require('ejs').renderFile);

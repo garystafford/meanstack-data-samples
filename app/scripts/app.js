@@ -5,19 +5,22 @@
     app.config(function ($routeProvider) {
         $routeProvider
             .when('/', {
+                title:       'Bootstrap Version',
                 templateUrl: 'views/data-bootstrap.html',
-                controller: 'DataController'
+                controller:  'DataController'
             })
             .when('/data', {
+                title:       'Non-Bootstrap Version',
                 templateUrl: 'views/data-no-bootstrap.html',
-                controller: 'DataController'
+                controller:  'DataController'
             })
             .when('/data-bootstrap', {
+                title:       'Bootstrap Version',
                 templateUrl: 'views/data-bootstrap.html',
-                controller: 'DataController'
+                controller:  'DataController'
             })
             .otherwise({
-                redirectTo: 'views/data-bootstrap.html'
+                redirectTo:  '/'
             });
     });
 })(); // <-- changed to immediately-invoked function expression to prevent strict error.

@@ -12,12 +12,11 @@ var env              = process.env.NODE_ENV || 'development';
 
 module.exports = function (app) {
     if ('travis' == env) {
-        console.log('env = travis');
+        console.log('environment = travis');
         app.use(function staticsPlaceholder(req, res, next) {
             return next();
         });
         app.set('db', 'mongodb://localhost/meanstack-travis');
-        app.set('name', 'A generator-meanstack sample application - Travis');
         app.set('port', process.env.PORT || 3000);
         app.set('views', path.join(app.directory, '/app'));
         app.engine('html', require('ejs').renderFile);
