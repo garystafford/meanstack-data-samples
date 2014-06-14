@@ -1,0 +1,6 @@
+{ "_id" : { "$oid" : "53266ee4f709a2574fdf15ab" }, "component" : "mongod", "description" : "core database process" }
+{ "_id" : { "$oid" : "53266ee4f709a2574fdf15ac" }, "component" : "mongos", "description" : "controller and query router for sharded clusters" }
+{ "_id" : { "$oid" : "53266ee4f709a2574fdf15ad" }, "component" : "mongo", "description" : "interactive MongoDB Shell" }
+{ "_id" : { "$oid" : "53266ee4f709a2574fdf15ae" }, "component" : "mongodump", "description" : "utility for creating binary export of database contents" }
+{ "_id" : { "$oid" : "53266ee4f709a2574fdf15af" }, "component" : "mongorestore", "description" : "writes data from a binary database dump to a MongoDB instance" }
+{ "_id" : { "$oid" : "53266ee4f709a2574fdf15b0" }, "component" : "mongooplog", "description" : "polls operations from the replication oplog" }

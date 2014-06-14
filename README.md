@@ -32,48 +32,22 @@ Contains examples of retrieving data using various AngularJS methods:
 * If using Chrome for Karma test, set the `CHROME_BIN` environment variable for Karma
   (i.e. `C:\Program Files (x86)\Google\Chrome\Application\chrome.exe`).
 
-**Create and Populate MongoDB Test Database**  
-To create the sample database, collection, and documents, you can run the following JavaScript file, using node:
-```
-node mongo-setup.js
-```
-Or, you can manually run the individual command:
-```
-mongod # starts core database process
-mongo # starts interactive MongoDB Shell
-
-use meanstack-test // creates database if it doesn't exist
-db.components.insert({ "component": "mongod",
-    "description": "core database process" })
-db.components.insert({ "component": "mongos",
-    "description": "controller and query router for sharded clusters" })
-db.components.insert({ "component": "mongo",
-    "description": "interactive MongoDB Shell" })
-db.components.insert({ "component": "mongodump",
-    "description": "utility for creating binary export of database contents" })
-db.components.insert({ "component": "mongorestore",
-    "description": "writes data from a binary database dump to a MongoDB instance" })
-db.components.insert({ "component": "mongooplog",
-    "description": "polls operations from the replication oplog" })
-show collections // verifies collection was created
-db.components.find() // verifies documents were created
-```
-
 **Installation and Configuration**  
 ```
-npm install -g generator-meanstack
+npm install -g generator-meanstack #optional
 git clone https://github.com/garystafford/meanstack-data-samples.git
 cd meanstack-data-samples
 npm install
 bower install
+mongoimport --db meanstack-$NODE_ENV --collection components components.json --drop # Unix
+# mongoimport --db meanstack-%NODE_ENV% --collection components components.json --drop # Windows
 grunt test
 grunt server
 ```
 
 ### Notes
-* Original project based on yeoman's [generator-angular](http://yeoman.io/). All generator commands work.
 * Link to main AngularJS `test-bootstrap` view: [http://localhost:3000/#](http://localhost:3000/#).
-* HTTP GET call to MongoDB data: [http://localhost:3000/api/components](http://localhost:3000/api/components).
+* RESTful call to MongoDB data: [http://localhost:3000/api/components](http://localhost:3000/api/components).
 * Deferred and Promises used to perform actions asynchronously: [$http](http://docs.angularjs.org/api/ng/service/$http)
 * Karma unit tests included for controller and services.
 * Karma's default port `8080` to `8090` in `karma.conf.js` Karma configuration file. Port 8080 conflicted with my installation of Apache and every other application that wants to use port `8080` by default.

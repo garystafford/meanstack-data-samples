@@ -16,7 +16,7 @@ module.exports = function (app) {
         app.use(function staticsPlaceholder(req, res, next) {
             return next();
         });
-        app.set('db', 'mongodb://localhost/meanstack-dev');
+        app.set('db', 'mongodb://localhost/meanstack-development');
         app.set('port', process.env.PORT || 9000);
         app.set('views', path.join(app.directory, '/app'));
         app.engine('html', require('ejs').renderFile);
