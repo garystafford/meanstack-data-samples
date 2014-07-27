@@ -1,7 +1,8 @@
 'use strict';
 
 angular.module('generatorMeanstackApp')
-    .controller('DataController', function ($scope, $http, $location, $anchorScroll, meanService, jsonFactory, jsonFactoryResource, mongoFactory, googleFactory) {
+    .controller('DataController', function ($scope, $http, $location, $anchorScroll, meanService, jsonFactory,
+                                            jsonFactoryResource, mongoFactory, googleFactory) {
 
         // Function within the AngularJS Controller returns a static array of strings.
         $scope.yeomanStuff = function () {
@@ -81,7 +82,7 @@ angular.module('generatorMeanstackApp')
     }).run(function ($location, $rootScope) {
         // source: http://stackoverflow.com/a/13407227/580268
         $rootScope.$on('$routeChangeSuccess', function (event, current) {
-            if (current.$$route != undefined) { // fix for Chrome
+            if (current.$$route !== undefined) { // fix for Chrome
                 $rootScope.title = current.$$route.title; // || "Bad Route"
             }
         });
