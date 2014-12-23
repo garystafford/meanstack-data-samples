@@ -9,7 +9,7 @@ Explores various methods of retrieving and displaying data using AngularJS and t
 Originally based on William Lepinski’s [generator-meanstack](https://github.com/wlepinski/generator-meanstack) 
 project with Mongoose and Twitter Bootstrap added.
 ### GitHub Branches
-Instructions below currently based on express4 branch.
+Instructions below currently based on express4 branch.  
 **customsearch**  
 New branch for project conversion to Google Custom Search created December, 2014.
 * Switch from using Google's Web Search API to Google's CustomSearch API v1.
