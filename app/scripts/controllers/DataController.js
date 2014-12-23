@@ -2,7 +2,7 @@
 
 angular.module('generatorMeanstackApp')
     .controller('DataController', function ($scope, $http, $location, $anchorScroll, meanService, jsonFactory,
-                                            jsonFactoryResource, mongoFactory, googleFactory) {
+                                            jsonFactoryResource, mongoFactory, googleFactory, googleCustomSearchFactory) {
 
         // Function within the AngularJS Controller returns a static array of strings.
         $scope.yeomanStuff = function () {
@@ -56,6 +56,17 @@ angular.module('generatorMeanstackApp')
         googleFactory.getSearchResults()
             .then(function (response) {
                 $scope.googleStuff = response.data.responseData.results;
+            }, function (error) {
+                console.error(error);
+            });
+
+        // AngularJS Factory returns response from
+        // Google's RESTful Custom Search API to the controller.
+        // Uses promise and deferred APIs
+        $scope.googleCustomStuff = {};
+        googleCustomSearchFactory.getSearchResults()
+            .then(function (response) {
+                $scope.googleCustomStuff = response.data.items;
             }, function (error) {
                 console.error(error);
             });

@@ -13,7 +13,7 @@ module.exports = function (app) {
     if ('production' == env) {
         console.log('environment = production');
         app.set('db', 'mongodb://localhost/meanstack-production');
-        app.set('port', process.env.PORT || 3000);
+        app.set('port', process.env.NODE_PORT || 3000);
         app.set('views', path.join(app.directory, '/dist'));
         app.engine('html', require('ejs').renderFile);
         app.set('view engine', 'html');

@@ -9,3 +9,5 @@ public/lib
 *~
 .tmp/
 *.log
+.idea/
+app/cse_config.json

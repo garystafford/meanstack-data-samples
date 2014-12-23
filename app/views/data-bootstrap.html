@@ -117,15 +117,15 @@
             <div id="collapseFive" class="panel-collapse collapse in">
                 <div class="panel-body">
                     <p>AngularJS Factory returns top 8 'mean stack' search results from
-                        Google's RESTful Web Search API to the controller.</p>
+                        Google's RESTful Custom Search API to the controller.</p>
                 </div>
                 <ul class="list-group">
                     <li class="list-group-item"
-                        ng-repeat="stuff in googleStuff">
-                        <a href="{{unescapedUrl.url}}"
-                           target="_blank"><b>{{stuff.visibleUrl}}</b></a>
+                        ng-repeat="stuff in googleCustomStuff">
+                        <a href="{{stuff.link}}"
+                           target="_blank"><b>{{stuff.displayLink}}</b></a>
 
-                        <div class="text-muted">{{stuff.titleNoFormatting}}</div>
+                        <div class="text-muted">{{stuff.title}}</div>
                     </li>
                 </ul>
             </div>

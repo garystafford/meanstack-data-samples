@@ -12,13 +12,13 @@ angular.module('generatorMeanstackApp')
                 var deferred = $q.defer(),
                     host = 'https://ajax.googleapis.com/ajax/services/search/web',
                     args = {
-                        'version': '1.0',
+                        'version'   : '1.0',
                         'searchTerm': 'mean%20stack',
-                        'results': '8',
-                        'callback': 'JSON_CALLBACK'
+                        'results'   : '8',
+                        'callback'  : 'JSON_CALLBACK'
                     },
                     params = ('?v=' + args.version + '&q=' + args.searchTerm + '&rsz=' +
-                        args.results + '&callback=' + args.callback),
+                    args.results + '&callback=' + args.callback),
                     httpPromise = $http.jsonp(host + params);
 
                 httpPromise.then(function (response) {

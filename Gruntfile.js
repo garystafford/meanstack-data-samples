@@ -61,7 +61,7 @@ module.exports = function (grunt) {
         },
         express: {
             options: {
-                port: process.env.PORT || 3000,
+                port: process.env.NODE_PORT || 3000,
                 hostname: '*'
             },
             livereload: {

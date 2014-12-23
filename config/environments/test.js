@@ -17,7 +17,7 @@ module.exports = function (app) {
             return next();
         });
         app.set('db', 'mongodb://localhost/meanstack-test');
-        app.set('port', process.env.PORT || 3000);
+        app.set('port', process.env.NODE_PORT || 3000);
         app.set('views', path.join(app.directory, '/app'));
         app.engine('html', require('ejs').renderFile);
         app.set('view engine', 'html');
