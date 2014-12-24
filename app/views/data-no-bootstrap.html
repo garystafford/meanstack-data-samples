@@ -42,13 +42,13 @@
     </div>
     <div>
         <p>AngularJS Factory returns top 8 'mean stack' search results from
-            Google's RESTful Web Search API to the controller.</p>
+            Google's CustomSearch API to the controller.</p>
         <ul>
-            <li ng-repeat="stuff in googleStuff">
-                <a href="{{unescapedUrl.url}}"
-                   target="_blank">{{stuff.visibleUrl}}</a>
+            <li ng-repeat="stuff in googleCustomStuff">
+                <a href="{{stuff.link}}"
+                   target="_blank">{{stuff.displayLink}}</a>
                 <br/>
-                {{stuff.titleNoFormatting}}
+                {{stuff.title}}
             </li>
         </ul>
         <hr/>
