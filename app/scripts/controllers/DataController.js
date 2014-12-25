@@ -50,7 +50,7 @@ angular.module('generatorMeanstackApp')
             });
 
         // AngularJS Factory returns response from
-        // Google's RESTful Web Search API to the controller.
+        // Google's Web Search API to the controller.
         // Uses promise and deferred APIs
         $scope.googleStuff = {};
         googleFactory.getSearchResults()
@@ -61,7 +61,7 @@ angular.module('generatorMeanstackApp')
             });
 
         // AngularJS Factory returns response from
-        // Google's RESTful Custom Search API to the controller.
+        // Google's Custom Search API to the controller.
         // Uses promise and deferred APIs
         $scope.googleCustomStuff = {};
         googleCustomSearchFactory.getSearchResults()

@@ -1,6 +1,6 @@
 <a href='https://travis-ci.org/garystafford/meanstack-data-samples'><img src='https://travis-ci.org/garystafford/meanstack-data-samples.svg?branch=express4'></a>
-<a href='https://david-dm.org/garystafford/meanstack-data-samples'><img src='https://david-dm.org/garystafford/meanstack-data-samples.png?branch=customsearch'></a>
-<a href='https://david-dm.org/garystafford/meanstack-data-samples#info=devDependencies'><img src='https://david-dm.org/garystafford/meanstack-data-samples/dev-status.png?branch=customsearch'></a>
+<a href='https://david-dm.org/garystafford/meanstack-data-samples'><img src='https://david-dm.org/garystafford/meanstack-data-samples.png'></a>
+<a href='https://david-dm.org/garystafford/meanstack-data-samples#info=devDependencies'><img src='https://david-dm.org/garystafford/meanstack-data-samples/dev-status.png'></a>
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/garystafford/meanstack-data-samples?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 ## Retrieving and Displaying Data with AngularJS and the MEAN Stack
 Project created for 2-part blog post series: 
