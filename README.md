@@ -40,10 +40,11 @@ Original code for blog post.
 * Review the [generator-meanstack](https://github.com/wlepinski/generator-meanstack) `README.md`
 * Project requires MongoDB, Node, Express, and Yeoman.
 * Set the `NODE_ENV` environment variable to the preferred environment (i.e. `test`).
-* If no `NODE_ENV` environment variable is set, application defaults to `development`.
+  * If no `NODE_ENV` environment variable is set, application defaults to `development`.
 * Set the `NODE_PORT` environment variable to the preferred startup port for node (i.e. `3111`).
-* If no `NODE_PORT` environment variable is set, application defaults to port `3000`.
-* If using Chrome for Karma test, set the `CHROME_BIN` environment variable for Karma (i.e. `C:\Program Files (x86)\Google\Chrome\Application\chrome.exe`).
+  * If no `NODE_PORT` environment variable is set, application defaults to port `3000`.
+* If using Chrome for Karma test, set the `CHROME_BIN` environment variable for Karma.
+  * i.e. `C:\Program Files (x86)\Google\Chrome\Application\chrome.exe`.
 
 **Installation and Configuration**  
 Run the following commands:
