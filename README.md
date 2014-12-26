@@ -46,7 +46,7 @@ Original code for blog post.
 * If using Chrome for Karma test, set the `CHROME_BIN` environment variable for Karma (i.e. `C:\Program Files (x86)\Google\Chrome\Application\chrome.exe`).
 
 **Installation and Configuration**  
-1. Run the following commands:
+Run the following commands:
 ```
 npm install -g generator-meanstack #optional
 git clone https://github.com/garystafford/meanstack-data-samples.git
@@ -56,8 +56,8 @@ bower install
 mongoimport --db meanstack-$NODE_ENV --collection components components.json --drop # Unix
 # mongoimport --db meanstack-%NODE_ENV% --collection components components.json --drop # Windows
 ```
-2. Add your own `search engine id` and your `API key` to the `cse_config.json` file.  
-3. To test the application, then start, run the following commands:
+Add your own `search engine id` and your `API key` to the `cse_config.json` file.  
+To test the application, then start, run the following commands:
 ```
 grunt test
 grunt server
