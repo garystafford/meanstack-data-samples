@@ -23,11 +23,10 @@ module.exports = function (app) {
         app.set('view engine', 'html');
         app.use(favicon('./app/favicon.ico'));
         app.use(logger('dev'));
-        app.use(bodyParser());
+        app.use(bodyParser.json());
         app.use(methodOverride());
         app.use(cookieParser('your secret here'));
-        app.use(session());
-
+        app.use(session({secret: 'mysecret', resave: true, saveUninitialized: true}));
         app.use(function middlewarePlaceholder(req, res, next) {
             return next();
         });
