@@ -58,6 +58,12 @@ mongoimport --db meanstack-$NODE_ENV --collection components components.json --d
 # mongoimport --db meanstack-%NODE_ENV% --collection components components.json --drop # Windows
 ```
 Add your own `search engine id` and your `API key` to the `cse_config.json` file.  
+```
+{
+    "cse_id" : "<your_search_engine_id>",
+    "api_key": "<your_api_key>"
+}
+```
 To test the application, then start, run the following commands:
 ```
 grunt test
