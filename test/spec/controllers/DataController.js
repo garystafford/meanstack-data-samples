@@ -16,19 +16,19 @@ describe('Controller: DataController', function ($httpBackend) {
             "components": [
                 {
                     "component": "red",
-                    "url": "http://orange.com"
+                    "url"      : "http://orange.com"
                 },
                 {
                     "component": "blue",
-                    "url": "http://blue.com"
+                    "url"      : "http://blue.com"
                 },
                 {
                     "component": "yellow",
-                    "url": "http://yellow.com"
+                    "url"      : "http://yellow.com"
                 },
                 {
                     "component": "orange",
-                    "url": "http://orange.com"
+                    "url"      : "http://orange.com"
                 }
             ]
 
@@ -38,19 +38,19 @@ describe('Controller: DataController', function ($httpBackend) {
         $httpBackend.when('GET', '/api/components').respond(
             [
                 {
-                    _id: "53226ca2b260b524e8ced833",
-                    component: "apple",
-                    description: "delicious and crisp red fruit"
+                    "_id"        : "53226ca2b260b524e8ced833",
+                    "component"  : "apple",
+                    "description": "delicious and crisp red fruit"
                 },
                 {
-                    _id: "53226ca2b260b524e8ced834",
-                    component: "cherry",
-                    description: "small dark red fruit"
+                    "_id"        : "53226ca2b260b524e8ced834",
+                    "component"  : "cherry",
+                    "description": "small dark red fruit"
                 },
                 {
-                    _id: "53226ca2b260b524e8ced835",
-                    component: "grapefruit",
-                    description: "tart yellowish-orange fruit"
+                    "_id"        : "53226ca2b260b524e8ced835",
+                    "component"  : "grapefruit",
+                    "description": "tart yellowish-orange fruit"
                 }
             ]
         );
@@ -62,28 +62,58 @@ describe('Controller: DataController', function ($httpBackend) {
             "responseData": {
                 "results": [
                     {
-                        GsearchResultClass: "GwebSearch",
-                        unescapedUrl: "http://www.foo.io/",
-                        url: "http://www.foo.io/",
-                        visibleUrl: "www.foo.io",
-                        cacheUrl: "http://www.google.com/search?q=cache:QxaTWi8gcToJ:www.foo.io",
-                        title: "<b>FOO</b>.io - The FOO Javascript Framework",
-                        titleNoFormatting: "FOO.io - The FOO Javascript Framework",
-                        content: "Have fun coding with the FOO Javascript Framework."
+                        "GsearchResultClass": "GwebSearch",
+                        "unescapedUrl"      : "http://www.foo.io/",
+                        "url"               : "http://www.foo.io/",
+                        "visibleUrl"        : "www.foo.io",
+                        "cacheUrl"          : "http://www.google.com/search?q=cache:QxaTWi8gcToJ:www.foo.io",
+                        "title"             : "<b>FOO</b>.io - The FOO Javascript Framework",
+                        "titleNoFormatting" : "FOO.io - The FOO Javascript Framework",
+                        "content"           : "Have fun coding with the FOO Javascript Framework."
                     },
                     {
-                        GsearchResultClass: "GwebSearch",
-                        unescapedUrl: "http://www.bar.io/",
-                        url: "http://www.bar.io/",
-                        visibleUrl: "www.bar.io",
-                        cacheUrl: "http://www.google.com/search?q=cache:QxaTWi8gcToJ:www.bar.io",
-                        title: "<b>BAR</b>.io - The BAR Javascript Library",
-                        titleNoFormatting: "BAR.io - The Javascript Library",
-                        content: "Have fun coding with the BAR Javascript Library."
+                        "GsearchResultClass": "GwebSearch",
+                        "unescapedUrl"      : "http://www.bar.io/",
+                        "url"               : "http://www.bar.io/",
+                        "visibleUrl"        : "www.bar.io",
+                        "cacheUrl"          : "http://www.google.com/search?q=cache:QxaTWi8gcToJ:www.bar.io",
+                        "title"             : "<b>BAR</b>.io - The BAR Javascript Library",
+                        "titleNoFormatting" : "BAR.io - The Javascript Library",
+                        "content"           : "Have fun coding with the BAR Javascript Library."
                     }
                 ]
             }
         });
+
+        // mock response to googleCustomSearchFactory $http.jsonp call
+        $httpBackend.when('GET', 'cse_config.json').respond(
+            [
+                {
+                    "cse_id" : "",
+                    "api_key": ""
+                }
+            ]
+        );
+
+        var googleCustomSearchURL = 'https://www.googleapis.com/customsearch/v1?cx=undefined&q=mean+stack&num=8&key=undefined&callback=JSON_CALLBACK';
+
+        $httpBackend.when('JSONP', googleCustomSearchURL).respond(
+            [
+                {
+                    "error": {
+                        "errors" : [
+                            {
+                                "domain" : "usageLimits",
+                                "reason" : "keyInvalid",
+                                "message": "Bad Request"
+                            }
+                        ],
+                        "code"   : 400,
+                        "message": "Bad Request"
+                    }
+                }
+            ]
+        );
 
         scope = $rootScope.$new();
         DataController = $controller('DataController', {

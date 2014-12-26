@@ -1,10 +1,9 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
-
-var componentSchema = new Schema({
-    component: String,
-    url: String
-});
+var mongoose        = require('mongoose'),
+    Schema          = mongoose.Schema,
+    componentSchema = new Schema({
+        component: String,
+        url      : String
+    });
 
 module.exports = mongoose.model('Component', componentSchema);
 

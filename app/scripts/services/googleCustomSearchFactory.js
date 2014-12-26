@@ -8,7 +8,6 @@
 // Request format: GET https://www.googleapis.com/customsearch/v1?cx={YOUR_CSE_ID}&q={SEARCH_TERM}&num=10&key={YOUR_API_KEY}
 // Request header: X-JavaScript-User-Agent:  Google APIs Explorer
 
-
 angular.module('generatorMeanstackApp')
     .factory('googleCustomSearchFactory', function ($q, $http) {
         var _getConfig = function () {
